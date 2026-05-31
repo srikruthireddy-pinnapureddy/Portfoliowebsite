@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Send, MessageSquare, Phone } from 'lucide-react';
+import { Mail, Github, Linkedin, Send, MessageSquare, Phone, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -40,7 +40,8 @@ export function Contact() {
             Let's Connect
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Ready to collaborate on the next big AI innovation? Let's build something amazing together.
+            Open to SOC Analyst L1, Associate Security Analyst, and Cybersecurity Analyst opportunities.
+            I am ready to contribute to SIEM monitoring, threat detection, incident response, and security automation initiatives.
           </p>
         </motion.div>
 
@@ -99,11 +100,40 @@ export function Contact() {
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white"
                   >
                     <Send className="mr-2" size={16} />
-                    Launch Message
+                    Send Message
                   </Button>
                 </form>
               </CardContent>
             </Card>
+
+            <div className="mt-4 grid sm:grid-cols-3 gap-3">
+              <a
+                href="/resume.pdf"
+                download
+                className="p-3 text-center bg-cyan-500/10 border border-cyan-400/30 text-cyan-200 rounded-lg hover:bg-cyan-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
+              >
+                <Download size={16} />
+                Resume Download
+              </a>
+              <a
+                href="https://github.com/srikruthireddy-pinnapureddy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 text-center bg-gray-500/10 border border-gray-400/30 text-gray-200 rounded-lg hover:bg-gray-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
+              >
+                <Github size={16} />
+                GitHub Profile
+              </a>
+              <a
+                href="https://linkedin.com/in/srikruthi-reddy-pinnapureddy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 text-center bg-blue-500/10 border border-blue-400/30 text-blue-200 rounded-lg hover:bg-blue-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
+              >
+                <Linkedin size={16} />
+                LinkedIn
+              </a>
+            </div>
           </motion.div>
 
           {/* AI Avatar & Social Links */}
@@ -138,7 +168,7 @@ export function Contact() {
                 />
               </motion.div>
               <p className="text-gray-300 text-lg">
-                "Ready to process your ideas into reality!"
+                "Prepared for SOC monitoring, threat detection, and incident response operations."
               </p>
             </div>
 
@@ -149,7 +179,8 @@ export function Contact() {
                 {[
                   { icon: Mail, label: "srikruthi12032005@gmail.com", href: "mailto:srikruthi12032005@gmail.com", color: "from-red-400 to-pink-400" },
                   { icon: Phone, label: "+91 9849414874", href: "tel:+919849414874", color: "from-green-400 to-blue-400" },
-                  { icon: Linkedin, label: "LinkedIn Profile", href: "https://linkedin.com/in/srikruthi-reddy-pinnapureddy", color: "from-blue-400 to-blue-600" }
+                    { icon: Linkedin, label: "LinkedIn Profile", href: "https://linkedin.com/in/srikruthi-reddy-pinnapureddy", color: "from-blue-400 to-blue-600" },
+                    { icon: Github, label: "GitHub Profile", href: "https://github.com/srikruthireddy-pinnapureddy", color: "from-gray-400 to-gray-600" }
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -185,7 +216,7 @@ export function Contact() {
           className="text-center mt-16 pt-8 border-t border-gray-700/50"
         >
           <p className="text-gray-500">
-            © 2026 Srikruthi Reddy Pinnapureddy. Engineering the future with AI.
+            © 2026 Srikruthi Reddy Pinnapureddy. Cybersecurity and SOC operations portfolio.
           </p>
         </motion.div>
       </div>

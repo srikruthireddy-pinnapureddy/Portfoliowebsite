@@ -4,54 +4,65 @@ import { motion } from 'framer-motion';
 export function TechStack() {
   const techCategories = [
     {
-      category: "Programming Languages",
+      category: 'Cybersecurity',
       skills: [
-        { name: "Python", level: 90, icon: "🐍" },
-        { name: "C", level: 85, icon: "💻" },
-        { name: "C++", level: 85, icon: "⚙️" },
-        { name: "Java", level: 80, icon: "☕" }
+        { name: 'SOC Monitoring', level: 88, icon: '🛡️' },
+        { name: 'SIEM', level: 84, icon: '📡' },
+        { name: 'Threat Detection', level: 90, icon: '🚨' },
+        { name: 'Incident Response', level: 85, icon: '🧭' },
+        { name: 'IOC Analysis', level: 86, icon: '🔎' },
+        { name: 'MITRE ATT&CK', level: 82, icon: '🗂️' },
+        { name: 'Threat Intelligence', level: 86, icon: '🌐' },
+        { name: 'Phishing Analysis', level: 88, icon: '✉️' },
+        { name: 'User Behavior Analytics', level: 84, icon: '👤' },
+        { name: 'Security Monitoring', level: 90, icon: '📊' },
+        { name: 'Alert Triage', level: 85, icon: '⚠️' },
+        { name: 'Log Analysis', level: 90, icon: '📜' }
       ]
     },
     {
-      category: "Databases",
+      category: 'Security Concepts',
       skills: [
-        { name: "MySQL", level: 85, icon: "🗃️" },
-        { name: "MongoDB", level: 80, icon: "🍃" }
+        { name: 'SSH Security', level: 88, icon: '🔐' },
+        { name: 'Authentication Logs', level: 90, icon: '🧾' },
+        { name: 'Privilege Escalation', level: 82, icon: '⬆️' },
+        { name: 'Brute Force Detection', level: 86, icon: '🔨' },
+        { name: 'Security Event Correlation', level: 84, icon: '🧩' },
+        { name: 'Incident Reporting', level: 88, icon: '📘' },
+        { name: 'Detection Engineering', level: 82, icon: '⚙️' },
+        { name: 'Threat Hunting Fundamentals', level: 80, icon: '🎯' }
       ]
     },
     {
-      category: "AI & Machine Learning",
+      category: 'Programming',
       skills: [
-        { name: "TensorFlow", level: 90, icon: "🧠" },
-        { name: "Keras", level: 88, icon: "🔬" },
-        { name: "Scikit-learn", level: 90, icon: "📊" },
-        { name: "PyTorch", level: 85, icon: "🔥" }
+        { name: 'Python', level: 92, icon: '🐍' },
+        { name: 'SQL', level: 84, icon: '🗃️' },
+        { name: 'C', level: 82, icon: '💻' },
+        { name: 'Java', level: 78, icon: '☕' }
       ]
     },
     {
-      category: "Computer Vision",
+      category: 'Tools',
       skills: [
-        { name: "OpenCV", level: 90, icon: "👁️" },
-        { name: "YOLO", level: 85, icon: "🎯" },
-        { name: "CNN Models", level: 88, icon: "🖼️" }
+        { name: 'Linux', level: 90, icon: '🐧' },
+        { name: 'Git', level: 88, icon: '🌱' },
+        { name: 'Docker', level: 78, icon: '🐳' },
+        { name: 'Wireshark', level: 75, icon: '🦈' },
+        { name: 'Streamlit', level: 90, icon: '📺' },
+        { name: 'VirusTotal API', level: 86, icon: '🔗' },
+        { name: 'AbuseIPDB API', level: 85, icon: '🧠' }
       ]
     },
     {
-      category: "Data Science",
+      category: 'Machine Learning for Security',
       skills: [
-        { name: "NumPy", level: 90, icon: "🔢" },
-        { name: "Pandas", level: 92, icon: "🐼" },
-        { name: "Matplotlib", level: 85, icon: "📈" }
-      ]
-    },
-    {
-      category: "Cloud & Tools",
-      skills: [
-        { name: "GCP", level: 80, icon: "☁️" },
-        { name: "Git", level: 88, icon: "🌱" },
-        { name: "Jupyter", level: 90, icon: "📓" },
-        { name: "Colab", level: 90, icon: "🔬" },
-        { name: "Flask", level: 85, icon: "⚗️" }
+        { name: 'Scikit-learn', level: 88, icon: '📉' },
+        { name: 'Isolation Forest', level: 84, icon: '🌲' },
+        { name: 'Pandas', level: 90, icon: '🐼' },
+        { name: 'NumPy', level: 88, icon: '🔢' },
+        { name: 'Behavioral Analytics', level: 86, icon: '🧬' },
+        { name: 'Anomaly Detection', level: 88, icon: '📍' }
       ]
     }
   ];
@@ -70,7 +81,8 @@ export function TechStack() {
             Technical Skills
           </h2>
           <p className="text-gray-400 text-lg">
-            Technologies and tools I use to build intelligent systems
+            SOC and Cybersecurity Analyst skill matrix covering SIEM, threat detection, incident response,
+            security monitoring, IOC analysis, and AI/ML for security analytics.
           </p>
         </motion.div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
+import { SecurityOpsShowcase } from './components/SecurityOpsShowcase';
 import { Experience } from './components/Experience';
 import { TechStack } from './components/TechStack';
 import { Certifications } from './components/Certifications';
@@ -17,6 +18,7 @@ export default function App() {
         <Hero />
         <About />
         <Projects />
+        <SecurityOpsShowcase />
         <Experience />
         <TechStack />
         <Certifications />

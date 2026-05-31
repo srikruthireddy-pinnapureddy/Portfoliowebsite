@@ -1,8 +1,7 @@
 import image_c47cc8122e433f909085ba8a960e3b0b0cd876d9 from 'figma:asset/c47cc8122e433f909085ba8a960e3b0b0cd876d9.png';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, GraduationCap, Target } from 'lucide-react';
-import profileImage from 'figma:asset/c47cc8122e433f909085ba8a960e3b0b0cd876d9.png';
+import { GraduationCap, Shield, Search, Activity } from 'lucide-react';
 
 export function About() {
   return (
@@ -51,14 +50,35 @@ export function About() {
             className="space-y-6"
           >
             <h3 className="text-2xl font-bold text-white mb-6">
-              Objective
+              About and Career Path
             </h3>
             
             <p className="text-gray-300 text-lg leading-relaxed">
-              Motivated CS undergraduate specializing in AI/ML with hands-on experience in computer vision and data visualization. 
-              To pursue a Master's degree to advance my understanding of core computational concepts and research methodologies. 
-              Driven to contribute to innovative, AI-powered solutions through analytical thinking and collaboration.
+              Aspiring Cybersecurity Analyst focused on Blue Team operations and SOC Analyst L1 responsibilities.
+              My work centers on threat detection, incident investigation, log analysis, IOC analysis, and
+              threat intelligence enrichment. I build Python-based security automation tools that map to
+              MITRE ATT&CK, improve alert triage, and strengthen incident reporting workflows.
             </p>
+
+            <div className="grid sm:grid-cols-2 gap-3 mt-6">
+              {[
+                'SOC Analyst Career Path',
+                'SIEM Monitoring and Alert Triage',
+                'Threat Detection and Incident Investigation',
+                'Log Analysis and IOC Analysis',
+                'Threat Intelligence and MITRE ATT&CK',
+                'Security Automation with Python',
+                'AI/ML for Cybersecurity',
+                'Behavioral Analytics'
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="px-3 py-2 bg-blue-500/10 border border-blue-400/20 rounded-lg text-blue-200 text-sm"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
 
             <div className="space-y-4 mt-8">
               <h3 className="text-xl font-bold text-white">Education</h3>
@@ -71,6 +91,21 @@ export function About() {
                     <p className="text-gray-300 text-sm">Bachelor of Technology – Computer Science and Engineering (AI & ML)</p>
                     <p className="text-purple-300 text-sm">October 2022 - Present • GPA: 8.06/10</p>
                   </div>
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-3 gap-3">
+                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
+                  <Shield className="mx-auto text-cyan-400 mb-2" size={20} />
+                  <p className="text-sm text-gray-300">Blue Team Mindset</p>
+                </div>
+                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
+                  <Search className="mx-auto text-blue-400 mb-2" size={20} />
+                  <p className="text-sm text-gray-300">Investigation Focus</p>
+                </div>
+                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
+                  <Activity className="mx-auto text-purple-400 mb-2" size={20} />
+                  <p className="text-sm text-gray-300">Security Monitoring</p>
                 </div>
               </div>
             </div>

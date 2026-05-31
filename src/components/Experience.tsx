@@ -1,26 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Briefcase, Award, FileText } from 'lucide-react';
+import { Briefcase, FileText } from 'lucide-react';
 
 export function Experience() {
   const experiences = [
     {
-      title: "AI Engineer Intern",
+      title: "Security Automation Intern",
       company: "MGCV Tech Pvt Ltd",
       location: "Hyderabad, India",
       period: "Nov 2025 - Present",
-      description: "Working on EdTech and AI initiatives to understand and implement AI workflows and machine learning pipelines, with a focus on Computer Vision and applied machine learning systems. Designing, training, and evaluating ML models, and supporting end-to-end AI pipelines using MLOps practices.",
+      description:
+        "Contributing to security-oriented automation workflows for operational monitoring in Linux-based environments. Building Python scripts for structured and unstructured data processing, anomaly-oriented analysis, and reliability improvements across monitoring pipelines.",
       icon: Briefcase,
-      skills: ["Computer Vision", "ML Pipelines", "MLOps", "Model Training", "AI Workflows"]
+      skills: [
+        'Python Automation',
+        'Operational Monitoring',
+        'Workflow Analysis',
+        'Linux Environments',
+        'Security-Oriented Data Processing',
+        'Anomaly-Oriented Analysis',
+        'Operational Reliability'
+      ]
     },
     {
       title: "AI Intern",
       company: "Warrous Pvt Ltd",
       location: "Hyderabad, India",
       period: "May 2025 - July 2025",
-      description: "Explored AI workflows and machine learning methodologies through hands-on NLP projects. Developed a spam vs. ham email classifier utilizing TF-IDF feature extraction and Naive Bayes algorithm, achieving 92% accuracy on 10,000+ email dataset.",
+      description:
+        "Developed spam detection and email filtering workflows using NLP-based text classification, with security-relevant analysis for malicious email patterns and phishing-like indicators in high-volume message datasets.",
       icon: Briefcase,
-      skills: ["NLP", "TF-IDF", "Naive Bayes", "Classification", "Feature Extraction"],
+      skills: [
+        'Spam Detection',
+        'Email Filtering',
+        'NLP Classification',
+        'Phishing-Relevant Analysis',
+        'Security-Oriented Data Processing'
+      ],
       certificate: "https://drive.google.com/file/d/1pNYJ27tp28mEx5dOs3Nd5SEP1JqkeAW-/view?usp=sharing"
     }
   ];
@@ -39,7 +55,7 @@ export function Experience() {
             Professional Experience
           </h2>
           <p className="text-gray-400 text-lg">
-            My journey in AI engineering and machine learning
+            Internship experience aligned with SOC operations, security automation, and incident-focused analysis
           </p>
         </motion.div>
 

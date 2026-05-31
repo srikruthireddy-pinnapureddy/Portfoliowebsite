@@ -6,25 +6,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 export function Certifications() {
   const certifications = [
     {
-      title: "AWS Educate Cloud Foundations",
-      description: "Multiple Specialization Badges Earned",
-      badges: [
-        {
-          name: "Getting Started with Serverless",
-          link: "https://www.credly.com/badges/8725b644-4e0e-4eeb-8d33-ec62d4b3a3a4/public_url"
-        },
-        {
-          name: "Getting Started with Compute",
-          link: "https://www.credly.com/badges/fe876e15-e461-48e3-a5bf-c0d49a1c608e/public_url"
-        },
-        {
-          name: "Getting Started with Databases",
-          link: "https://www.credly.com/badges/03e6ba33-69c3-450f-8a28-cc0707f1a831/public_url"
-        }
-      ],
-      gradient: "from-orange-400 to-yellow-500"
-    },
-    {
       title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
       link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=F98E5E2EB49427FA357952499B346194927775F762C1ECE0D85018DA5B153D1F",
       issued: "Issued Sep 2025",
@@ -37,6 +18,29 @@ export function Certifications() {
       issued: "Issued Aug 2025",
       expires: "Expires Aug 2027",
       gradient: "from-red-500 to-orange-500"
+    },
+    {
+      title: 'Future Certification Roadmap',
+      description: 'Planned cybersecurity certifications aligned with SOC Analyst and Cybersecurity Analyst roles.',
+      badges: [
+        {
+          name: 'Microsoft SC-900',
+          link: 'https://learn.microsoft.com/credentials/certifications/security-compliance-and-identity-fundamentals/'
+        },
+        {
+          name: 'Microsoft SC-200',
+          link: 'https://learn.microsoft.com/credentials/certifications/security-operations-analyst/'
+        },
+        {
+          name: 'CompTIA Security+',
+          link: 'https://www.comptia.org/certifications/security'
+        },
+        {
+          name: 'Google Cybersecurity Professional Certificate',
+          link: 'https://grow.google/certificates/cybersecurity/'
+        }
+      ],
+      gradient: 'from-blue-500 to-cyan-500'
     }
   ];
 
@@ -54,7 +58,7 @@ export function Certifications() {
             Certifications
           </h2>
           <p className="text-gray-400 text-lg">
-            Professional certifications and achievements
+            Certifications supporting Cybersecurity Analyst and SOC Analyst career progression
           </p>
         </motion.div>
 

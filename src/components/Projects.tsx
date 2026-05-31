@@ -15,7 +15,7 @@ export function Projects() {
       tech: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Chart.js', 'Scikit-learn'],
       features: ['Automated Categorization', 'Forecasting', 'Interactive Charts', 'Recurring Expense Detection', 'Export/Import'],
       gradient: 'from-green-400 to-emerald-500',
-      github: 'https://github.com/srikruthireddy-pinnapureddy/ExpenX',
+      github: 'https://github.com/srikruthireddy-pinnapureddy/money-notes-app-1bd93cf2',
       period: '2024'
     },
     {
@@ -26,7 +26,7 @@ export function Projects() {
       tech: ['Raspberry Pi', 'Python', 'TensorFlow', 'YOLOv5', 'OpenCV', 'MQTT'],
       features: ['Real-time Detection', 'Edge Inference', 'Alerting', 'Dashboard', 'Low-power Optimizations'],
       gradient: 'from-red-400 to-orange-500',
-      github: 'https://github.com/srikruthireddy-pinnapureddy/fire-smoke-detection',
+      github: 'https://github.com/srikruthireddy-pinnapureddy/fire-and-smoke-detection-system-using-YOLOv9',
       period: '2023'
     },
     {
@@ -37,7 +37,7 @@ export function Projects() {
       tech: ['Python', 'TensorFlow', 'Keras', 'MobileNet', 'Flask', 'Docker'],
       features: ['Transfer Learning', 'Model Explainability', 'Web UI', 'Dockerized'],
       gradient: 'from-pink-400 to-purple-500',
-      github: 'https://github.com/srikruthireddy-pinnapureddy/skin-cancer-classifier',
+      github: 'https://github.com/srikruthireddy-pinnapureddy/Skin-Cancer-Detection-using-GCN-CNN-Hybrid-Models',
       period: '2022'
     },
 

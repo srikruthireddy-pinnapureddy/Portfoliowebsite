@@ -15,7 +15,7 @@ export function Projects() {
       tech: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Chart.js', 'Scikit-learn'],
       features: ['Automated Categorization', 'Forecasting', 'Interactive Charts', 'Recurring Expense Detection', 'Export/Import'],
       gradient: 'from-green-400 to-emerald-500',
-      github: '#',
+      github: 'https://github.com/srikruthireddy-pinnapureddy/ExpenX',
       period: '2024'
     },
     {
@@ -26,7 +26,7 @@ export function Projects() {
       tech: ['Raspberry Pi', 'Python', 'TensorFlow', 'YOLOv5', 'OpenCV', 'MQTT'],
       features: ['Real-time Detection', 'Edge Inference', 'Alerting', 'Dashboard', 'Low-power Optimizations'],
       gradient: 'from-red-400 to-orange-500',
-      github: '#',
+      github: 'https://github.com/srikruthireddy-pinnapureddy/fire-smoke-detection',
       period: '2023'
     },
     {
@@ -37,7 +37,7 @@ export function Projects() {
       tech: ['Python', 'TensorFlow', 'Keras', 'MobileNet', 'Flask', 'Docker'],
       features: ['Transfer Learning', 'Model Explainability', 'Web UI', 'Dockerized'],
       gradient: 'from-pink-400 to-purple-500',
-      github: '#',
+      github: 'https://github.com/srikruthireddy-pinnapureddy/skin-cancer-classifier',
       period: '2022'
     },
 
@@ -80,7 +80,7 @@ export function Projects() {
         'Streamlit Dashboard'
       ],
       gradient: 'from-orange-400 to-red-500',
-      github: '#',
+      github: 'https://github.com/srikruthireddy-pinnapureddy/phishing-email-header-analyzer',
       period: '2025'
     },
     {
@@ -99,7 +99,7 @@ export function Projects() {
         'Streamlit Dashboard'
       ],
       gradient: 'from-purple-400 to-pink-500',
-      github: '#',
+      github: 'https://github.com/srikruthireddy-pinnapureddy/insider-threat-uba',
       period: '2025'
     }
   ];

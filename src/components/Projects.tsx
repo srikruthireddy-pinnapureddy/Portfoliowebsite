@@ -6,6 +6,42 @@ import { Button } from './ui/button';
 
 export function Projects() {
   const projects = [
+    // Original AI / ML projects (restored)
+    {
+      title: 'ExpenX — Expense Insights & Forecasting',
+      description:
+        'Full-stack expense tracking web app with ML-powered categorization and forecasting. Provides analytics, recurring expense detection, and visualizations to help users optimize spending.',
+      icon: Github,
+      tech: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Chart.js', 'Scikit-learn'],
+      features: ['Automated Categorization', 'Forecasting', 'Interactive Charts', 'Recurring Expense Detection', 'Export/Import'],
+      gradient: 'from-green-400 to-emerald-500',
+      github: '#',
+      period: '2024'
+    },
+    {
+      title: 'Fire & Smoke Detection System',
+      description:
+        'Edge ML solution using a Raspberry Pi and camera with a lightweight object detector to identify fire and smoke in real-time, plus alerting and dashboard visualization.',
+      icon: UserRoundSearch,
+      tech: ['Raspberry Pi', 'Python', 'TensorFlow', 'YOLOv5', 'OpenCV', 'MQTT'],
+      features: ['Real-time Detection', 'Edge Inference', 'Alerting', 'Dashboard', 'Low-power Optimizations'],
+      gradient: 'from-red-400 to-orange-500',
+      github: '#',
+      period: '2023'
+    },
+    {
+      title: 'Skin Cancer (Melanoma) Classifier',
+      description:
+        'Transfer-learning based image classifier trained on dermoscopic images to help identify melanoma vs benign lesions; includes explainability overlays and a simple UI for review.',
+      icon: MailWarning,
+      tech: ['Python', 'TensorFlow', 'Keras', 'MobileNet', 'Flask', 'Docker'],
+      features: ['Transfer Learning', 'Model Explainability', 'Web UI', 'Dockerized'],
+      gradient: 'from-pink-400 to-purple-500',
+      github: '#',
+      period: '2022'
+    },
+
+    // New cybersecurity projects (appended)
     {
       title: 'SIEM Log Analyzer for SSH Threat Detection',
       description:

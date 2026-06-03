@@ -1,60 +1,63 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Radar, Workflow, Download, Github, Linkedin } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, ServerCog, TerminalSquare, Workflow } from 'lucide-react';
 
 export function Hero() {
-  const fullName = "SRIKRUTHI REDDY PINNAPUREDDY";
-  const [displayedName, setDisplayedName] = useState("");
+  const fullName = 'SRIKRUTHI REDDY PINNAPUREDDY';
+  const [displayedName, setDisplayedName] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const highlights = [
-    'SOC Monitoring',
-    'SIEM Concepts',
-    'Threat Detection',
-    'Incident Response',
-    'Threat Intelligence',
-    'Security Automation',
-    'Python Security Tooling',
-    'Linux'
+    'Backend Development',
+    'REST APIs',
+    'Database Design',
+    'Cloud Deployment',
+    'System Debugging',
+    'Testing',
+    'AI & ML Applications',
+    'Distributed Systems'
   ];
 
   useEffect(() => {
     if (currentIndex < fullName.length) {
       const timeout = setTimeout(() => {
-        setDisplayedName(prev => prev + fullName[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
+        setDisplayedName((prev) => prev + fullName[currentIndex]);
+        setCurrentIndex((prev) => prev + 1);
       }, 100); // Typing speed: 100ms per character
       return () => clearTimeout(timeout);
     }
-  }, [currentIndex]);
+  }, [currentIndex, fullName]);
 
   return (
     <section className="min-h-screen flex items-center justify-center px-6 relative">
-      <div className="text-center max-w-4xl">
+      <div className="text-center max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            <span className="text-gray-300">
-              {displayedName}
-              <motion.span
-                animate={{ opacity: [1, 0, 1] }}
-                transition={{ duration: 0.8, repeat: Infinity }}
-                className="inline-block ml-1"
-              >
-                |
-              </motion.span>
-            </span>
+          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-200 mb-6">
+            <ServerCog size={16} />
+            Honeywell Software Engineer I Candidate
+          </div>
+
+          <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight text-white">
+            {displayedName}
+            <motion.span
+              animate={{ opacity: [1, 0, 1] }}
+              transition={{ duration: 0.9, repeat: Infinity }}
+              className="inline-block ml-1 text-cyan-300"
+            >
+              |
+            </motion.span>
           </h1>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-xl md:text-3xl font-bold text-white mb-6"
+            className="text-xl md:text-3xl font-semibold text-cyan-100 mb-6"
           >
-            Aspiring SOC Analyst | SIEM & Threat Detection | Security Automation | Incident Response | Python | AI/ML for Cybersecurity
+            Software Engineer | Backend Developer | AI & Systems Developer
           </motion.div>
         </motion.div>
 
@@ -62,12 +65,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto"
+          className="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
         >
-          Aspiring Cybersecurity Analyst with a strong foundation in SOC operations, SIEM monitoring,
-          threat detection, incident response, phishing analysis, and security automation. Experienced
-          in building Python-based cybersecurity solutions for log analysis, threat intelligence enrichment,
-          phishing investigation, and behavioral anomaly detection using machine learning.
+          B.Tech graduate specializing in Artificial Intelligence and Machine Learning with experience in backend development,
+          scalable software systems, REST APIs, cloud deployment, workflow automation, machine learning applications, and distributed systems.
         </motion.p>
 
         <motion.div
@@ -79,7 +80,7 @@ export function Hero() {
           {highlights.map((highlight) => (
             <span
               key={highlight}
-              className="px-4 py-2 bg-blue-500/15 border border-blue-400/30 text-blue-200 rounded-full text-sm"
+              className="rounded-full border border-blue-400/25 bg-blue-500/10 px-4 py-2 text-sm text-blue-100"
             >
               {highlight}
             </span>
@@ -90,22 +91,22 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="flex justify-center space-x-8 mb-12"
+          className="flex justify-center gap-6 mb-12"
         >
-          {[ShieldCheck, Radar, Workflow].map((Icon, index) => (
+          {[Workflow, TerminalSquare, ServerCog].map((Icon, index) => (
             <motion.div
               key={index}
-              animate={{ 
+              animate={{
                 rotate: 360,
-                scale: [1, 1.2, 1]
+                scale: [1, 1.08, 1]
               }}
-              transition={{ 
-                rotate: { duration: 10, repeat: Infinity, ease: "linear" },
-                scale: { duration: 2, repeat: Infinity, delay: index * 0.3 }
+              transition={{
+                rotate: { duration: 12, repeat: Infinity, ease: 'linear' },
+                scale: { duration: 2.4, repeat: Infinity, delay: index * 0.25 }
               }}
-              className="p-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30"
+              className="rounded-full border border-cyan-400/25 bg-gradient-to-br from-cyan-500/15 to-blue-500/15 p-4"
             >
-              <Icon size={40} className="text-blue-400" />
+              <Icon size={36} className="text-cyan-300" />
             </motion.div>
           ))}
         </motion.div>
@@ -118,13 +119,14 @@ export function Hero() {
         >
           <a
             href="#projects"
-            className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-lg transition-all duration-300"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 px-8 py-3 text-white transition-all duration-300 hover:from-cyan-400 hover:to-blue-400"
           >
-            View Security Projects
+            View Projects
+            <ArrowRight size={18} />
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 bg-transparent border border-blue-400 text-blue-400 hover:bg-blue-400/10 rounded-lg transition-all duration-300"
+            className="rounded-lg border border-blue-400/60 px-8 py-3 text-blue-200 transition-all duration-300 hover:bg-blue-500/10"
           >
             Contact Me
           </a>
@@ -139,7 +141,7 @@ export function Hero() {
           <a
             href="/resume.pdf"
             download
-            className="px-6 py-3 bg-transparent border border-cyan-400 text-cyan-300 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-cyan-400/70 px-6 py-3 text-cyan-200 transition-all duration-300 hover:bg-cyan-500/10"
           >
             <Download size={18} />
             Resume Download
@@ -148,7 +150,7 @@ export function Hero() {
             href="https://github.com/srikruthireddy-pinnapureddy"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-transparent border border-gray-400 text-gray-200 hover:bg-gray-500/10 rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-400/60 px-6 py-3 text-gray-200 transition-all duration-300 hover:bg-gray-500/10"
           >
             <Github size={18} />
             GitHub Profile
@@ -157,7 +159,7 @@ export function Hero() {
             href="https://linkedin.com/in/srikruthi-reddy-pinnapureddy"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-transparent border border-blue-400 text-blue-300 hover:bg-blue-500/10 rounded-lg transition-all duration-300 inline-flex items-center justify-center gap-2"
+            className="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-400/60 px-6 py-3 text-blue-200 transition-all duration-300 hover:bg-blue-500/10"
           >
             <Linkedin size={18} />
             LinkedIn

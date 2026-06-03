@@ -38,7 +38,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-200 mb-6">
             <ServerCog size={16} />
-            Honeywell Software Engineer I Candidate
+              Software Engineer Candidate
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight text-white">

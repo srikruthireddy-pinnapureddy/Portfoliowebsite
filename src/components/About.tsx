@@ -86,7 +86,7 @@ export function About() {
               I design and build dependable software systems with an emphasis on backend development,
               API integration, database design, debugging, testing, and documentation. My AI/ML background
               adds depth to data-driven problem solving, but my career focus is software engineering that is
-              maintainable, scalable, and recruiter-ready for enterprise environments like Honeywell.
+              maintainable, scalable, and recruiter-ready for enterprise environments.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 mt-6">

@@ -72,7 +72,7 @@ export function Certifications() {
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.02 }}
             >
-              <Card className="bg-gray-900/50 border-gray-700/50 hover:border-yellow-400/50 transition-all duration-300 overflow-hidden relative h-full flex flex-col">
+              <Card className="bg-gray-900 border border-purple-500/30 rounded-xl p-6 shadow-lg shadow-purple-500/10">
                 <div className={`absolute inset-0 bg-gradient-to-br ${cert.gradient} opacity-0 hover:opacity-5 transition-opacity duration-300`} />
                 
                 <CardHeader className="relative">

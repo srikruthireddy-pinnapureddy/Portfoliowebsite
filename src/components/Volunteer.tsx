@@ -85,7 +85,7 @@ export function Volunteer() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02 }}
-                className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-gray-900 border border-purple-500/30 rounded-xl p-6 shadow-lg shadow-purple-500/10"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-0 hover:opacity-5 transition-opacity duration-300 rounded-lg`} />
                 

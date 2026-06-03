@@ -4,67 +4,60 @@ import { motion } from 'framer-motion';
 export function TechStack() {
   const techCategories = [
     {
-      category: 'Cybersecurity',
-      skills: [
-        { name: 'SOC Monitoring', level: 88, icon: '🛡️' },
-        { name: 'SIEM', level: 84, icon: '📡' },
-        { name: 'Threat Detection', level: 90, icon: '🚨' },
-        { name: 'Incident Response', level: 85, icon: '🧭' },
-        { name: 'IOC Analysis', level: 86, icon: '🔎' },
-        { name: 'MITRE ATT&CK', level: 82, icon: '🗂️' },
-        { name: 'Threat Intelligence', level: 86, icon: '🌐' },
-        { name: 'Phishing Analysis', level: 88, icon: '✉️' },
-        { name: 'User Behavior Analytics', level: 84, icon: '👤' },
-        { name: 'Security Monitoring', level: 90, icon: '📊' },
-        { name: 'Alert Triage', level: 85, icon: '⚠️' },
-        { name: 'Log Analysis', level: 90, icon: '📜' }
-      ]
-    },
-    {
-      category: 'Security Concepts',
-      skills: [
-        { name: 'SSH Security', level: 88, icon: '🔐' },
-        { name: 'Authentication Logs', level: 90, icon: '🧾' },
-        { name: 'Privilege Escalation', level: 82, icon: '⬆️' },
-        { name: 'Brute Force Detection', level: 86, icon: '🔨' },
-        { name: 'Security Event Correlation', level: 84, icon: '🧩' },
-        { name: 'Incident Reporting', level: 88, icon: '📘' },
-        { name: 'Detection Engineering', level: 82, icon: '⚙️' },
-        { name: 'Threat Hunting Fundamentals', level: 80, icon: '🎯' }
-      ]
-    },
-    {
-      category: 'Programming',
-      skills: [
-        { name: 'Python', level: 92, icon: '🐍' },
-        { name: 'SQL', level: 84, icon: '🗃️' },
-        { name: 'C', level: 82, icon: '💻' },
-        { name: 'Java', level: 78, icon: '☕' }
-      ]
-    },
-    {
-      category: 'Tools',
-      skills: [
-        { name: 'Linux', level: 90, icon: '🐧' },
-        { name: 'Git', level: 88, icon: '🌱' },
-        { name: 'Docker', level: 78, icon: '🐳' },
-        { name: 'Wireshark', level: 75, icon: '🦈' },
-        { name: 'Streamlit', level: 90, icon: '📺' },
-        { name: 'VirusTotal API', level: 86, icon: '🔗' },
-        { name: 'AbuseIPDB API', level: 85, icon: '🧠' }
-      ]
-    },
-    {
-      category: 'Machine Learning for Security',
-      skills: [
-        { name: 'Scikit-learn', level: 88, icon: '📉' },
-        { name: 'Isolation Forest', level: 84, icon: '🌲' },
-        { name: 'Pandas', level: 90, icon: '🐼' },
-        { name: 'NumPy', level: 88, icon: '🔢' },
-        { name: 'Behavioral Analytics', level: 86, icon: '🧬' },
-        { name: 'Anomaly Detection', level: 88, icon: '📍' }
-      ]
-    }
+  category: 'Software Engineering',
+  skills: [
+    { name: 'SDLC', level: 90, icon: '⚙️' },
+    { name: 'Software Design', level: 88, icon: '🏗️' },
+    { name: 'Debugging', level: 92, icon: '🐞' },
+    { name: 'Testing', level: 88, icon: '🧪' },
+    { name: 'Documentation', level: 90, icon: '📝' },
+    { name: 'Performance Optimization', level: 86, icon: '🚀' }
+  ]
+},
+{
+  category: 'Backend Development',
+  skills: [
+    { name: 'Node.js', level: 88, icon: '🟢' },
+    { name: 'NestJS', level: 84, icon: '🏛️' },
+    { name: 'Flask', level: 90, icon: '🌶️' },
+    { name: 'REST APIs', level: 92, icon: '🔌' },
+    { name: 'API Integration', level: 90, icon: '🔗' },
+    { name: 'Backend Architecture', level: 84, icon: '🏗️' }
+  ]
+},
+{
+  category: 'Database Systems',
+  skills: [
+    { name: 'PostgreSQL', level: 88, icon: '🐘' },
+    { name: 'MySQL', level: 86, icon: '🗄️' },
+    { name: 'Redis', level: 82, icon: '⚡' },
+    { name: 'SQL', level: 90, icon: '📊' },
+    { name: 'Database Design', level: 84, icon: '🧱' },
+    { name: 'Query Optimization', level: 80, icon: '⚡' }
+  ]
+},
+{
+  category: 'Cloud & DevOps',
+  skills: [
+    { name: 'AWS', level: 82, icon: '☁️' },
+    { name: 'Docker', level: 80, icon: '🐳' },
+    { name: 'Linux', level: 90, icon: '🐧' },
+    { name: 'Git', level: 90, icon: '🌱' },
+    { name: 'GitHub', level: 92, icon: '🐙' },
+    { name: 'CI/CD Fundamentals', level: 75, icon: '🔄' }
+  ]
+},
+{
+  category: 'Core Computer Science',
+  skills: [
+    { name: 'Data Structures', level: 88, icon: '🌲' },
+    { name: 'Algorithms', level: 86, icon: '📐' },
+    { name: 'OOP', level: 90, icon: '📦' },
+    { name: 'DBMS', level: 90, icon: '🗃️' },
+    { name: 'Operating Systems', level: 84, icon: '💻' },
+    { name: 'Computer Networks', level: 82, icon: '🌐' }
+  ]
+},
   ];
 
   return (
@@ -81,8 +74,7 @@ export function TechStack() {
             Technical Skills
           </h2>
           <p className="text-gray-400 text-lg">
-            SOC and Cybersecurity Analyst skill matrix covering SIEM, threat detection, incident response,
-            security monitoring, IOC analysis, and AI/ML for security analytics.
+             Software Engineering, Backend Development, Cloud Computing, Database Systems, Cybersecurity, and Artificial Intelligence skill portfolio covering scalable application development, APIs, distributed systems, automation, and modern engineering practices.
           </p>
         </motion.div>
 
@@ -94,7 +86,7 @@ export function TechStack() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:border-purple-400/50 transition-all duration-300"
+              className="bg-gray-900 border border-purple-500/30 rounded-xl p-6 shadow-lg shadow-purple-500/10"
             >
               <h3 className="text-xl font-bold text-white mb-6 text-center">
                 {category.category}

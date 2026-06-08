@@ -5,21 +5,23 @@ import { Briefcase, FileText } from 'lucide-react';
 export function Experience() {
   const experiences = [
     {
-      title: "Security Automation Intern",
+      title: "AI Engineer Intern",
       company: "MGCV Tech Pvt Ltd",
       location: "Hyderabad, India",
       period: "Nov 2025 - Present",
       description:
-        "Contributing to security-oriented automation workflows for operational monitoring in Linux-based environments. Building Python scripts for structured and unstructured data processing, anomaly-oriented analysis, and reliability improvements across monitoring pipelines.",
+        "Developed AI-powered voice interviewing solutions using Python, FastAPI, and conversational AI technologies. Contributed to backend services, API integration, interview workflow management, and application reliability improvements within a startup environment.",
       icon: Briefcase,
       skills: [
-        'Python Automation',
-        'Operational Monitoring',
-        'Workflow Analysis',
-        'Linux Environments',
-        'Security-Oriented Data Processing',
-        'Anomaly-Oriented Analysis',
-        'Operational Reliability'
+        'Python',
+        'FastAPI',
+        'REST APIs',
+        'Conversational AI',
+        'Backend Development',
+        'API Integration',
+        'SQLite',
+        'Debugging',
+        'Software Development'
       ]
     },
     {
@@ -28,14 +30,17 @@ export function Experience() {
       location: "Hyderabad, India",
       period: "May 2025 - July 2025",
       description:
-        "Developed spam detection and email filtering workflows using NLP-based text classification, with security-relevant analysis for malicious email patterns and phishing-like indicators in high-volume message datasets.",
+        "Developed a Flask-based spam detection application using Python and NLP techniques. Worked on email content processing, classification workflows, debugging, testing, and backend application development.",
       icon: Briefcase,
       skills: [
+        'Python',
+        'Flask',
+        'NLP',
         'Spam Detection',
-        'Email Filtering',
-        'NLP Classification',
-        'Phishing-Relevant Analysis',
-        'Security-Oriented Data Processing'
+        'BeautifulSoup',
+        'Backend Development',
+        'Testing',
+        'Debugging'
       ],
       certificate: "https://drive.google.com/file/d/1pNYJ27tp28mEx5dOs3Nd5SEP1JqkeAW-/view?usp=sharing"
     }
@@ -55,7 +60,7 @@ export function Experience() {
             Professional Experience
           </h2>
           <p className="text-gray-400 text-lg">
-            Internship experience aligned with SOC operations, security automation, and incident-focused analysis
+            Professional experience building backend systems, AI-powered applications, REST APIs, and software solutions.
           </p>
         </motion.div>
 

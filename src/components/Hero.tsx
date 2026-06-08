@@ -7,15 +7,15 @@ export function Hero() {
   const [displayedName, setDisplayedName] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const highlights = [
-    'Backend Development',
-    'REST APIs',
-    'Database Design',
-    'Cloud Deployment',
-    'System Debugging',
-    'Testing',
-    'AI & ML Applications',
-    'Distributed Systems'
-  ];
+  'Data Structures & Algorithms',
+  'Backend Engineering',
+  'REST API Development',
+  'Database Management',
+  'System Design',
+  'Full Stack Development',
+  'Cloud Computing',
+  'Software Engineering'
+];
 
   useEffect(() => {
     if (currentIndex < fullName.length) {

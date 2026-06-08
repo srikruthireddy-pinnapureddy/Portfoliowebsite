@@ -7,46 +7,50 @@ export function About() {
   const focusAreas = [
     'Data Structures & Algorithms',
     'Object-Oriented Programming',
-    'DBMS',
+    'Database Management Systems',
     'Operating Systems',
     'Computer Networks',
     'Backend Development',
-    'REST APIs',
-    'Cloud Computing',
+    'REST API Development',
+    'System Design Fundamentals',
     'Software Engineering',
-    'SDLC',
-    'Debugging',
-    'Testing',
     'Database Design',
-    'Distributed Systems'
+    'Debugging & Testing',
+    'Full Stack Development',
+    'Cloud Computing',
+    'Problem Solving'
   ];
 
   const roles = [
     'Software Engineer',
-    'Backend Developer',
-    'AI Engineer',
+    'Backend Engineer',
+    'Full Stack Developer',
     'Application Developer',
-    'Systems Developer'
+    'AI-Powered Systems Developer'
   ];
 
   return (
     <section className="py-20 px-6" id="about">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            About Me
-          </h2>
-          <p className="mx-auto max-w-3xl text-lg text-gray-400">
-            Software engineer with a strong AI and systems foundation, focused on backend engineering,
-            reliable software delivery, clean APIs, and practical problem solving for production environments.
-          </p>
-        </motion.div>
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="text-center mb-16"
+>
+  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+    About Me
+  </h2>
+  <p className="mx-auto max-w-3xl text-lg text-gray-400">
+    Software Engineer with experience building full-stack applications,
+    backend services, REST APIs, and AI-powered systems. Passionate about
+    solving complex problems through scalable software design, efficient
+    algorithms, and clean engineering practices. Experienced in developing
+    production-oriented applications using Python, FastAPI, React,
+    TypeScript, SQL, and modern development tools.
+  </p>
+</motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -83,10 +87,7 @@ export function About() {
             </h3>
             
             <p className="text-gray-300 text-lg leading-relaxed">
-              I design and build dependable software systems with an emphasis on backend development,
-              API integration, database design, debugging, testing, and documentation. My AI/ML background
-              adds depth to data-driven problem solving, but my career focus is software engineering that is
-              maintainable, scalable, and recruiter-ready for enterprise environments.
+               I enjoy designing and building software systems that are reliable, scalable, and easy to maintain. My experience spans backend development, API design, full-stack web applications, database management, and AI-powered solutions. Through internships and projects, I have worked on conversational AI systems, computer vision applications, and web platforms while strengthening my foundations in data structures, algorithms, object-oriented programming, databases, operating systems, and software engineering principles.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-3 mt-6">
@@ -120,7 +121,7 @@ export function About() {
                   <div>
                     <h4 className="text-white font-semibold">Kakatiya Institute of Technology & Science</h4>
                     <p className="text-gray-300 text-sm">Bachelor of Technology – Computer Science and Engineering (AI & ML)</p>
-                    <p className="text-cyan-300 text-sm">October 2022 - Present • GPA: 8.06/10</p>
+                    <p className="text-cyan-300 text-sm">October 2022 - May 2026 • CGPA: 8.18/10</p>
                   </div>
                 </div>
               </div>
@@ -128,30 +129,30 @@ export function About() {
               <div className="grid sm:grid-cols-3 gap-3">
                 <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
                   <Code2 className="mx-auto text-cyan-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Clean Backend Logic</p>
+                  <p className="text-sm text-gray-300">Data Structures & Algorithms</p>
                 </div>
                 <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
                   <Database className="mx-auto text-blue-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Database-First Thinking</p>
+                  <p className="text-sm text-gray-300">Backend Engineering</p>
                 </div>
                 <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
                   <ShieldCheck className="mx-auto text-purple-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Reliable Delivery Mindset</p>
+                  <p className="text-sm text-gray-300">Problem Solving</p>
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-3 gap-3">
                 <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
                   <Layers3 className="mx-auto text-cyan-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Systems Thinking</p>
+                  <p className="text-sm text-gray-300">System Design</p>
                 </div>
                 <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
                   <Activity className="mx-auto text-blue-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Execution Focus</p>
+                  <p className="text-sm text-gray-300">API Development</p>
                 </div>
                 <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
                   <ShieldCheck className="mx-auto text-purple-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Quality and Testing</p>
+                  <p className="text-sm text-gray-300">Software Engineering</p>
                 </div>
               </div>
             </div>

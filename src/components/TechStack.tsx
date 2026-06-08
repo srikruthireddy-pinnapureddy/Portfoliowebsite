@@ -4,64 +4,70 @@ import { motion } from 'framer-motion';
 export function TechStack() {
   const techCategories = [
     {
-  category: 'Software Engineering',
-  skills: [
-    { name: 'SDLC', level: 90, icon: '⚙️' },
-    { name: 'Software Design', level: 88, icon: '🏗️' },
-    { name: 'Debugging', level: 92, icon: '🐞' },
-    { name: 'Testing', level: 88, icon: '🧪' },
-    { name: 'Documentation', level: 90, icon: '📝' },
-    { name: 'Performance Optimization', level: 86, icon: '🚀' }
-  ]
-},
-{
-  category: 'Backend Development',
-  skills: [
-    { name: 'Node.js', level: 88, icon: '🟢' },
-    { name: 'NestJS', level: 84, icon: '🏛️' },
-    { name: 'Flask', level: 90, icon: '🌶️' },
-    { name: 'REST APIs', level: 92, icon: '🔌' },
-    { name: 'API Integration', level: 90, icon: '🔗' },
-    { name: 'Backend Architecture', level: 84, icon: '🏗️' }
-  ]
-},
-{
-  category: 'Database Systems',
-  skills: [
-    { name: 'PostgreSQL', level: 88, icon: '🐘' },
-    { name: 'MySQL', level: 86, icon: '🗄️' },
-    { name: 'Redis', level: 82, icon: '⚡' },
-    { name: 'SQL', level: 90, icon: '📊' },
-    { name: 'Database Design', level: 84, icon: '🧱' },
-    { name: 'Query Optimization', level: 80, icon: '⚡' }
-  ]
-},
-{
-  category: 'Cloud & DevOps',
-  skills: [
-    { name: 'AWS', level: 82, icon: '☁️' },
-    { name: 'Docker', level: 80, icon: '🐳' },
-    { name: 'Linux', level: 90, icon: '🐧' },
-    { name: 'Git', level: 90, icon: '🌱' },
-    { name: 'GitHub', level: 92, icon: '🐙' },
-    { name: 'CI/CD Fundamentals', level: 75, icon: '🔄' }
-  ]
-},
-{
-  category: 'Core Computer Science',
-  skills: [
-    { name: 'Data Structures', level: 88, icon: '🌲' },
-    { name: 'Algorithms', level: 86, icon: '📐' },
-    { name: 'OOP', level: 90, icon: '📦' },
-    { name: 'DBMS', level: 90, icon: '🗃️' },
-    { name: 'Operating Systems', level: 84, icon: '💻' },
-    { name: 'Computer Networks', level: 82, icon: '🌐' }
-  ]
-},
+      category: 'Programming Languages',
+      skills: [
+        { name: 'Java', level: 85, icon: '☕' },
+        { name: 'Python', level: 90, icon: '🐍' },
+        { name: 'SQL', level: 88, icon: '🗄️' },
+        { name: 'C', level: 80, icon: '💻' }
+      ]
+    },
+    {
+      category: 'Backend Development',
+      skills: [
+        { name: 'FastAPI', level: 90, icon: '⚡' },
+        { name: 'Flask', level: 88, icon: '🌶️' },
+        { name: 'REST APIs', level: 90, icon: '🔌' },
+        { name: 'API Integration', level: 88, icon: '🔗' },
+        { name: 'WebSockets', level: 82, icon: '🌐' },
+        { name: 'JWT Authentication', level: 80, icon: '🔐' }
+      ]
+    },
+    {
+      category: 'Frontend Development',
+      skills: [
+        { name: 'React', level: 85, icon: '⚛️' },
+        { name: 'Next.js', level: 82, icon: '▲' },
+        { name: 'TypeScript', level: 80, icon: '🔷' },
+        { name: 'Tailwind CSS', level: 88, icon: '🎨' }
+      ]
+    },
+    {
+      category: 'Database Systems',
+      skills: [
+        { name: 'PostgreSQL', level: 86, icon: '🐘' },
+        { name: 'SQLite', level: 90, icon: '📊' },
+        { name: 'Redis', level: 80, icon: '⚡' },
+        { name: 'Database Design', level: 84, icon: '🧱' },
+        { name: 'SQL Optimization', level: 80, icon: '🚀' }
+      ]
+    },
+    {
+      category: 'Core Computer Science',
+      skills: [
+        { name: 'Data Structures', level: 88, icon: '🌲' },
+        { name: 'Algorithms', level: 86, icon: '📐' },
+        { name: 'OOP', level: 90, icon: '📦' },
+        { name: 'DBMS', level: 90, icon: '🗃️' },
+        { name: 'Operating Systems', level: 82, icon: '💻' },
+        { name: 'Computer Networks', level: 80, icon: '🌐' }
+      ]
+    },
+    {
+      category: 'AI & Cloud Technologies',
+      skills: [
+        { name: 'Google Gemini', level: 85, icon: '🤖' },
+        { name: 'OpenAI Whisper', level: 82, icon: '🎤' },
+        { name: 'TensorFlow', level: 84, icon: '🧠' },
+        { name: 'YOLOv9', level: 82, icon: '🔥' },
+        { name: 'AWS', level: 75, icon: '☁️' },
+        { name: 'Git & GitHub', level: 90, icon: '🌱' }
+      ]
+    }
   ];
 
   return (
-    <section className="py-20 px-6" id="skills">
+  <section className="py-20 px-6" id="skills">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -74,7 +80,7 @@ export function TechStack() {
             Technical Skills
           </h2>
           <p className="text-gray-400 text-lg">
-             Software Engineering, Backend Development, Cloud Computing, Database Systems, Cybersecurity, and Artificial Intelligence skill portfolio covering scalable application development, APIs, distributed systems, automation, and modern engineering practices.
+            Technical skill portfolio spanning software engineering, backend development, full-stack applications, cloud technologies, databases, and AI-powered systems. Focused on building scalable applications, REST APIs, modern web platforms, and production-ready software solutions.
           </p>
         </motion.div>
 

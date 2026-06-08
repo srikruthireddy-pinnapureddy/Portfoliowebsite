@@ -9,7 +9,6 @@ type ProjectCategory =
   | 'Backend & Cloud Projects'
   | 'Data Engineering Projects'
   | 'Artificial Intelligence Projects'
-  | 'Cybersecurity Projects'
   | 'Web Applications';
 
 type Project = {
@@ -32,7 +31,6 @@ const categoryOrder: ProjectCategory[] = [
   'Backend & Cloud Projects',
   'Data Engineering Projects',
   'Artificial Intelligence Projects',
-  'Cybersecurity Projects',
   'Web Applications'
 ];
 
@@ -41,7 +39,6 @@ const categoryMeta: Record<ProjectCategory, { label: string; icon: React.Compone
   'Backend & Cloud Projects': { label: 'Backend & Cloud Projects', icon: ServerCog },
   'Data Engineering Projects': { label: 'Data Engineering Projects', icon: Database },
   'Artificial Intelligence Projects': { label: 'Artificial Intelligence Projects', icon: Code2 },
-  'Cybersecurity Projects': { label: 'Cybersecurity Projects', icon: ShieldCheck },
   'Web Applications': { label: 'Web Applications', icon: Workflow }
 };
 
@@ -157,45 +154,6 @@ export function Projects() {
       period: '2025',
       icon: Workflow,
       gradient: 'from-fuchsia-400 to-rose-500'
-    },
-    {
-      title: 'SIEM Log Analyzer for SSH Threat Detection',
-      description:
-        'SOC-style SSH log analysis pipeline that detects brute-force attempts, suspicious access patterns, and likely account compromise events with analyst-friendly summaries.',
-      category: 'Cybersecurity Projects',
-      techStack: ['Python', 'Regex', 'Linux Auth Logs', 'Streamlit'],
-      technologiesUsed: ['JSON', 'MITRE ATT&CK', 'AbuseIPDB API', 'VirusTotal API', 'Threat Intelligence'],
-      keyFeatures: ['MITRE ATT&CK Mapping', 'Severity Scoring', 'IOC Extraction', 'Incident Reporting', 'Threat Enrichment'],
-      githubLink: 'https://github.com/srikruthireddy-pinnapureddy/-SIEM-Log-Analyzer-for-SSH-Threat-Detection-',
-      period: '2025',
-      icon: ShieldCheck,
-      gradient: 'from-cyan-400 to-sky-500'
-    },
-    {
-      title: 'Phishing Email Header Analyzer',
-      description:
-        'Automated phishing investigation tool for header analysis, spoofing checks, IOC extraction, and threat intelligence enrichment to speed up triage.',
-      category: 'Cybersecurity Projects',
-      techStack: ['Python', 'Flask', 'Regex', 'Email Parser'],
-      technologiesUsed: ['VirusTotal API', 'AbuseIPDB API', 'DNS Lookup', 'Streamlit', 'JSON'],
-      keyFeatures: ['SPF Validation', 'DKIM Validation', 'DMARC Validation', 'IOC Extraction', 'Reputation Analysis'],
-      githubLink: 'https://github.com/srikruthireddy-pinnapureddy/phishing-email-header-analyzer',
-      period: '2025',
-      icon: ExternalLink,
-      gradient: 'from-orange-400 to-red-500'
-    },
-    {
-      title: 'Insider Threat Detection using User Behavior Analytics',
-      description:
-        'Machine learning-based User Behavior Analytics system that scores anomalous activity and flags suspicious access patterns from enterprise-style logs.',
-      category: 'Cybersecurity Projects',
-      techStack: ['Python', 'Scikit-learn', 'Pandas', 'NumPy'],
-      technologiesUsed: ['Isolation Forest', 'Streamlit', 'Matplotlib', 'Behavioral Analytics', 'Risk Scoring'],
-      keyFeatures: ['Anomaly Detection', 'Alert Prioritization', 'Security Monitoring', 'Risk Scoring', 'Dashboarding'],
-      githubLink: 'https://github.com/srikruthireddy-pinnapureddy/insider-threat-uba',
-      period: '2025',
-      icon: ShieldCheck,
-      gradient: 'from-purple-400 to-pink-500'
     },
     {
       title: 'Portfolio Website',

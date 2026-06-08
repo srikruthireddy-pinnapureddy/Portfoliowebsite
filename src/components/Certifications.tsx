@@ -4,43 +4,44 @@ import { Award, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 
 export function Certifications() {
-  const certifications = [
+  const certifications: Array<{
+    title: string;
+    link?: string;
+    description?: string;
+    issued?: string;
+    expires?: string;
+    badges?: Array<{ name: string; link: string }>;
+    gradient: string;
+  }> = [
+    {
+      title: "Insert First Certificate Name",
+      link: "https://www.credly.com/badges/f815bf31-9dff-418b-80c8-e27c80d6c2c4/linked_in_profile",
+      gradient: "from-red-500 to-orange-500"
+    },
     {
       title: "Oracle Cloud Infrastructure 2025 Certified Generative AI Professional",
-      link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=F98E5E2EB49427FA357952499B346194927775F762C1ECE0D85018DA5B153D1F",
-      issued: "Issued Sep 2025",
-      expires: "Expires Sep 2027",
+      link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=F98E5E2EB49427FA357952499B346194927775F762C1ECE0D85018DA5B153D1F",
       gradient: "from-red-500 to-orange-500"
     },
     {
       title: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
-      link: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=E4EF7109B834FBDE0793AA2A906F73C8A5F0449A58D0CF7011783592C1BBB923",
-      issued: "Issued Aug 2025",
-      expires: "Expires Aug 2027",
+      link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=E4EF7109B834FBDE0793AA2A906F73C8A5F0449A58D0CF7011783592C1BBB923",
       gradient: "from-red-500 to-orange-500"
     },
     {
-      title: 'Future Certification Roadmap',
-      description: 'Planned cybersecurity certifications aligned with SOC Analyst and Cybersecurity Analyst roles.',
-      badges: [
-        {
-          name: 'Microsoft SC-900',
-          link: 'https://learn.microsoft.com/credentials/certifications/security-compliance-and-identity-fundamentals/'
-        },
-        {
-          name: 'Microsoft SC-200',
-          link: 'https://learn.microsoft.com/credentials/certifications/security-operations-analyst/'
-        },
-        {
-          name: 'CompTIA Security+',
-          link: 'https://www.comptia.org/certifications/security'
-        },
-        {
-          name: 'Google Cybersecurity Professional Certificate',
-          link: 'https://grow.google/certificates/cybersecurity/'
-        }
-      ],
-      gradient: 'from-blue-500 to-cyan-500'
+      title: "Azure Databricks – Build Data Engineering and AI/ML Pipeline",
+      link: "https://www.udemy.com/certificate/UC-7e1c2007-e26e-4636-92c8-db65d833ede2/",
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "AWS Educate Introduction to Cloud 101",
+      link: "https://www.credly.com/badges/790e722b-b3f5-4bb4-9822-2d5c53fc370d/public_url",
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "AWS Educate Getting Started with Databases",
+      link: "https://www.credly.com/badges/03e6ba33-69c3-450f-8a28-cc0707f1a831/public_url",
+      gradient: "from-blue-500 to-cyan-500"
     }
   ];
 
@@ -58,7 +59,7 @@ export function Certifications() {
             Certifications
           </h2>
           <p className="text-gray-400 text-lg">
-            Certifications supporting Cybersecurity Analyst and SOC Analyst career progression
+            Recent credentials supporting software engineering, cloud, and AI/ML learning
           </p>
         </motion.div>
 
@@ -124,7 +125,7 @@ export function Certifications() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center space-x-2 px-4 py-2 bg-yellow-500/20 text-yellow-300 rounded border border-yellow-400/30 hover:bg-yellow-500/30 transition-all duration-300"
                     >
-                      <span className="text-sm">View Credential</span>
+                      <span className="text-sm">View Certificate</span>
                       <ExternalLink size={16} />
                     </a>
                   )}

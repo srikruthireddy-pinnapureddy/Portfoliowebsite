@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Send, MessageSquare, Phone, Download } from 'lucide-react';
+import { Mail, Github, Linkedin, Send, MessageSquare, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -15,7 +15,6 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log('Form submitted:', formData);
   };
 
@@ -37,23 +36,21 @@ export function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
-            Let's Connect
+            Let's Build AI Systems
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Open to SOC Analyst L1, Associate Security Analyst, and Cybersecurity Analyst opportunities.
-            I am ready to contribute to SIEM monitoring, threat detection, incident response, and security automation initiatives.
+            Open to AI Engineering, ML Engineering, and Applied Scientist roles. Ready to contribute to production LLM integrations, model-driven APIs, and scalable machine learning systems.
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-gray-900/80 backdrop-blur-sm border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
+            <Card className="bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-white flex items-center space-x-2">
                   <MessageSquare className="text-blue-400" />
@@ -113,7 +110,7 @@ export function Contact() {
                 className="p-3 text-center bg-cyan-500/10 border border-cyan-400/30 text-cyan-200 rounded-lg hover:bg-cyan-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
               >
                 <Download size={16} />
-                Resume Download
+                Resume
               </a>
               <a
                 href="https://github.com/srikruthireddy-pinnapureddy"
@@ -122,7 +119,7 @@ export function Contact() {
                 className="p-3 text-center bg-gray-500/10 border border-gray-400/30 text-gray-200 rounded-lg hover:bg-gray-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
               >
                 <Github size={16} />
-                GitHub Profile
+                GitHub
               </a>
               <a
                 href="https://linkedin.com/in/srikruthi-reddy-pinnapureddy"
@@ -136,7 +133,6 @@ export function Contact() {
             </div>
           </motion.div>
 
-          {/* AI Avatar & Social Links */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -144,17 +140,16 @@ export function Contact() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            {/* Animated AI Avatar */}
             <div className="text-center">
               <motion.div
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0]
+                animate={{
+                  scale: [1, 1.08, 1],
+                  rotate: [0, 4, -4, 0]
                 }}
-                transition={{ 
+                transition={{
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: 'easeInOut'
                 }}
                 className="w-40 h-40 mx-auto mb-6 relative"
               >
@@ -163,24 +158,22 @@ export function Contact() {
                 </div>
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 15, repeat: Infinity, ease: 'linear' }}
                   className="absolute inset-0 border-2 border-dashed border-purple-400/20 rounded-full"
                 />
               </motion.div>
               <p className="text-gray-300 text-lg">
-                "Prepared for SOC monitoring, threat detection, and incident response operations."
+                Ready to build reliable AI products, production model pipelines, and intelligent systems that scale.
               </p>
             </div>
 
-            {/* Social Links */}
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-white text-center mb-6">Connect With Me</h3>
               <div className="space-y-3">
                 {[
-                  { icon: Mail, label: "srikruthi12032005@gmail.com", href: "mailto:srikruthi12032005@gmail.com", color: "from-red-400 to-pink-400" },
-                  { icon: Phone, label: "+91 9849414874", href: "tel:+919849414874", color: "from-green-400 to-blue-400" },
-                    { icon: Linkedin, label: "LinkedIn Profile", href: "https://linkedin.com/in/srikruthi-reddy-pinnapureddy", color: "from-blue-400 to-blue-600" },
-                    { icon: Github, label: "GitHub Profile", href: "https://github.com/srikruthireddy-pinnapureddy", color: "from-gray-400 to-gray-600" }
+                  { icon: Github, label: 'GitHub Profile', href: 'https://github.com/srikruthireddy-pinnapureddy', color: 'from-gray-400 to-gray-600' },
+                  { icon: Linkedin, label: 'LinkedIn Profile', href: 'https://linkedin.com/in/srikruthi-reddy-pinnapureddy', color: 'from-blue-400 to-blue-600' },
+                  { icon: Mail, label: 'srikruthi12032005@gmail.com', href: 'mailto:srikruthi12032005@gmail.com', color: 'from-red-400 to-pink-400' }
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}
@@ -190,7 +183,7 @@ export function Contact() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
-                    whileHover={{ scale: 1.05, x: 10 }}
+                    whileHover={{ scale: 1.05, x: 8 }}
                     viewport={{ once: true }}
                     className="flex items-center space-x-4 p-4 bg-gray-900/50 rounded-lg border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 group"
                   >
@@ -207,7 +200,6 @@ export function Contact() {
           </motion.div>
         </div>
 
-        {/* Footer */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -216,7 +208,7 @@ export function Contact() {
           className="text-center mt-16 pt-8 border-t border-gray-700/50"
         >
           <p className="text-gray-500">
-            © 2026 Srikruthi Reddy Pinnapureddy. Cybersecurity and SOC operations portfolio.
+            © 2026 Srikruthi Reddy Pinnapureddy. AI Engineering and machine learning portfolio.
           </p>
         </motion.div>
       </div>

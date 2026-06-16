@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -36,12 +36,7 @@ export function Certifications() {
     {
       title: "AWS Educate Introduction to Cloud 101",
       link: "https://www.credly.com/badges/790e722b-b3f5-4bb4-9822-2d5c53fc370d/public_url",
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "AWS Educate Getting Started with Databases",
-      link: "https://www.credly.com/badges/03e6ba33-69c3-450f-8a28-cc0707f1a831/public_url",
-      gradient: "from-blue-500 to-cyan-500"
+      gradient: "from-orange-400 to-yellow-500"
     }
   ];
 
@@ -114,7 +109,7 @@ export function Certifications() {
                           className="flex items-center justify-between p-2 bg-yellow-500/10 hover:bg-yellow-500/20 rounded border border-yellow-400/30 transition-all duration-300 group"
                         >
                           <span className="text-gray-300 text-sm group-hover:text-white">{badge.name}</span>
-                          <ExternalLink className="w-4 h-4 text-yellow-400" />
+                          <ExternalLink size={16} />
                         </a>
                       ))}
                     </div>

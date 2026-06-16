@@ -26,31 +26,14 @@ export function Volunteer() {
         "Supervised a team of volunteers to ensure smooth execution of cultural and educational activities."
       ],
       icon: Calendar,
-      gradient: "from-pink-400 to-red-500"
+      gradient: "from-green-400 to-emerald-500"
     },
     {
-      title: "Executive Member",
-      organization: "Literary & Extramural Club",
-      institution: "Kakatiya Institute of Technology & Science",
-      period: "Aug 2024 - May 2025",
+      title: "Kuchipudi Dancer",
+      organization: "Cultural Performer",
       description: [
-        "Assisted in planning and conducting literary competitions, debates, and extracurricular programs.",
-        "Supported event publicity, registration drives, and overall club operations to improve student participation."
+        "Government-certified Kuchipudi dancer with multiple stage performances, cultural representations, and recipient of the prestigious Natya Mayuri Award."
       ],
-      icon: Users,
-      gradient: "from-blue-400 to-cyan-500"
-    }
-  ];
-
-  const achievements = [
-    {
-      title: "Kalakar Book of World Records",
-      description: "Holder of the prestigious Kalakar Book of World Records in Kuchipudi dance, showcasing excellence in traditional Indian classical dance.",
-      icon: "🏆"
-    },
-    {
-      title: "Natya Mayuri Award & Government Certification",
-      description: "Government-certified Kuchipudi dancer with multiple stage performances, cultural representations, and recipient of the prestigious Natya Mayuri Award.",
       icon: "🎭"
     }
   ];
@@ -95,7 +78,11 @@ export function Volunteer() {
                     transition={{ duration: 0.5 }}
                     className={`p-3 rounded-full bg-gradient-to-r ${exp.gradient} bg-opacity-20 flex-shrink-0`}
                   >
-                    <exp.icon className="w-6 h-6 text-white" />
+                    {typeof exp.icon === 'string' ? (
+                      <span className="text-2xl">{exp.icon}</span>
+                    ) : (
+                      <exp.icon className="w-6 h-6 text-white" />
+                    )}
                   </motion.div>
                   
                   <div className="flex-grow">
@@ -109,35 +96,13 @@ export function Volunteer() {
                     <ul className="space-y-2">
                       {exp.description.map((item, i) => (
                         <li key={i} className="text-gray-300 text-sm flex items-start">
-                          <span className="text-purple-400 mr-2">•</span>
+                          <span className="text-purple-400 mr-3">•</span>
                           <span>{item}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Extracurricular Achievements */}
-        <div>
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Extracurricular Achievements</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={achievement.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-400/30 rounded-lg p-6 hover:border-purple-400/60 transition-all duration-300"
-              >
-                <div className="text-5xl mb-4 text-center">{achievement.icon}</div>
-                <h4 className="text-xl font-bold text-white mb-3 text-center">{achievement.title}</h4>
-                <p className="text-gray-300 text-center">{achievement.description}</p>
               </motion.div>
             ))}
           </div>

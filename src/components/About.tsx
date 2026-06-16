@@ -1,4 +1,4 @@
-import image_c47cc8122e433f909085ba8a960e3b0b0cd876d9 from 'figma:asset/c47cc8122e433f909085ba8a960e3b0b0cd876d9.png';
+﻿import image_c47cc8122e433f909085ba8a960e3b0b0cd876d9 from 'figma:asset/c47cc8122e433f909085ba8a960e3b0b0cd876d9.png';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Activity, Code2, Database, GraduationCap, Layers3, ShieldCheck } from 'lucide-react';
@@ -33,24 +33,24 @@ export function About() {
     <section className="py-20 px-6" id="about">
       <div className="max-w-6xl mx-auto">
         <motion.div
-  initial={{ opacity: 0, y: 50 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  viewport={{ once: true }}
-  className="text-center mb-16"
->
-  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-    About Me
-  </h2>
-  <p className="mx-auto max-w-3xl text-lg text-gray-400">
-    Software Engineer with experience building full-stack applications,
-    backend services, REST APIs, and AI-powered systems. Passionate about
-    solving complex problems through scalable software design, efficient
-    algorithms, and clean engineering practices. Experienced in developing
-    production-oriented applications using Python, FastAPI, React,
-    TypeScript, SQL, and modern development tools.
-  </p>
-</motion.div>
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            About Me
+          </h2>
+          <p className="mx-auto max-w-3xl text-lg text-gray-400">
+            Software Engineer with experience building full-stack applications,
+            backend services, REST APIs, and AI-powered systems. Passionate about
+            solving complex problems through scalable software design, efficient
+            algorithms, and clean engineering practices. Experienced in developing
+            production-oriented applications using Python, FastAPI, React,
+            TypeScript, SQL, and modern development tools.
+          </p>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -60,18 +60,13 @@ export function About() {
             viewport={{ once: true }}
           >
             <div className="relative">
-              <div className="mx-auto flex h-80 w-80 items-center justify-center overflow-hidden rounded-full border-2 border-cyan-400/25 bg-gradient-to-br from-cyan-500/15 to-blue-500/15 p-4 shadow-2xl shadow-cyan-950/20">
-                <img 
-                  src={image_c47cc8122e433f909085ba8a960e3b0b0cd876d9} 
-                  alt="Srikruthi Reddy Pinnapureddy" 
-                  className="w-full h-full object-cover rounded-full"
+              <div className="rounded-2xl border-2 border-cyan-400/30 overflow-hidden bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-1">
+                <img
+                  src={image_c47cc8122e433f909085ba8a960e3b0b0cd876d9}
+                  alt="Profile"
+                  className="w-full rounded-xl aspect-square object-cover"
                 />
               </div>
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 border-2 border-dashed border-cyan-400/20 rounded-full"
-              />
             </div>
           </motion.div>
 

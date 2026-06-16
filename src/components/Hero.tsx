@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, ServerCog, TerminalSquare, Workflow } from 'lucide-react';
 
@@ -7,15 +7,15 @@ export function Hero() {
   const [displayedName, setDisplayedName] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const highlights = [
-  'Data Structures & Algorithms',
-  'Backend Engineering',
-  'REST API Development',
-  'Database Management',
-  'System Design',
-  'Full Stack Development',
-  'Cloud Computing',
-  'Software Engineering'
-];
+    'Data Structures & Algorithms',
+    'Backend Engineering',
+    'REST API Development',
+    'Database Management',
+    'System Design',
+    'Full Stack Development',
+    'Cloud Computing',
+    'Software Engineering'
+  ];
 
   useEffect(() => {
     if (currentIndex < fullName.length) {
@@ -38,7 +38,7 @@ export function Hero() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-200 mb-6">
             <ServerCog size={16} />
-              Software Engineer Candidate
+            Software Engineer Candidate
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight text-white">
@@ -51,20 +51,15 @@ export function Hero() {
               |
             </motion.span>
           </h1>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-xl md:text-3xl font-semibold text-cyan-100 mb-6"
-          >
+          <div className="text-xl md:text-3xl font-semibold text-cyan-100 mb-6">
             Software Engineer | Backend Developer | AI & Systems Developer
-          </motion.div>
+          </div>
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.8 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
           className="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
         >
           B.Tech graduate specializing in Artificial Intelligence and Machine Learning with experience in backend development,
@@ -74,7 +69,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {highlights.map((highlight) => (

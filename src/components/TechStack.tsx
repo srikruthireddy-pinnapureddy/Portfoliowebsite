@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 
 export function TechStack() {
@@ -20,54 +20,54 @@ export function TechStack() {
         { name: 'REST APIs', level: 90, icon: '🔌' },
         { name: 'API Integration', level: 88, icon: '🔗' },
         { name: 'WebSockets', level: 82, icon: '🌐' },
-        { name: 'JWT Authentication', level: 80, icon: '🔐' }
+        { name: 'Node.js', level: 85, icon: '⚙️' },
+        { name: 'NestJS', level: 82, icon: '🏗️' }
       ]
     },
     {
       category: 'Frontend Development',
       skills: [
-        { name: 'React', level: 85, icon: '⚛️' },
-        { name: 'Next.js', level: 82, icon: '▲' },
-        { name: 'TypeScript', level: 80, icon: '🔷' },
-        { name: 'Tailwind CSS', level: 88, icon: '🎨' }
+        { name: 'React', level: 87, icon: '⚛️' },
+        { name: 'TypeScript', level: 85, icon: '🔷' },
+        { name: 'Tailwind CSS', level: 88, icon: '🎨' },
+        { name: 'Framer Motion', level: 85, icon: '✨' }
       ]
     },
     {
-      category: 'Database Systems',
+      category: 'Database Technologies',
       skills: [
         { name: 'PostgreSQL', level: 86, icon: '🐘' },
-        { name: 'SQLite', level: 90, icon: '📊' },
-        { name: 'Redis', level: 80, icon: '⚡' },
-        { name: 'Database Design', level: 84, icon: '🧱' },
-        { name: 'SQL Optimization', level: 80, icon: '🚀' }
+        { name: 'MySQL', level: 84, icon: '🐬' },
+        { name: 'MongoDB', level: 80, icon: '🍃' },
+        { name: 'SQLite', level: 85, icon: '📦' },
+        { name: 'Redis', level: 82, icon: '⚡' }
       ]
     },
     {
-      category: 'Core Computer Science',
+      category: 'Cloud & DevOps',
       skills: [
-        { name: 'Data Structures', level: 88, icon: '🌲' },
-        { name: 'Algorithms', level: 86, icon: '📐' },
-        { name: 'OOP', level: 90, icon: '📦' },
-        { name: 'DBMS', level: 90, icon: '🗃️' },
-        { name: 'Operating Systems', level: 82, icon: '💻' },
-        { name: 'Computer Networks', level: 80, icon: '🌐' }
+        { name: 'AWS', level: 82, icon: '☁️' },
+        { name: 'Docker', level: 85, icon: '🐳' },
+        { name: 'Git', level: 88, icon: '🔀' },
+        { name: 'Netlify', level: 86, icon: '🚀' },
+        { name: 'Vercel', level: 84, icon: '▲' }
       ]
     },
     {
-      category: 'AI & Cloud Technologies',
+      category: 'Artificial Intelligence & ML',
       skills: [
-        { name: 'Google Gemini', level: 85, icon: '🤖' },
-        { name: 'OpenAI Whisper', level: 82, icon: '🎤' },
-        { name: 'TensorFlow', level: 84, icon: '🧠' },
-        { name: 'YOLOv9', level: 82, icon: '🔥' },
-        { name: 'AWS', level: 75, icon: '☁️' },
-        { name: 'Git & GitHub', level: 90, icon: '🌱' }
+        { name: 'Machine Learning', level: 85, icon: '🧠' },
+        { name: 'Deep Learning', level: 82, icon: '🤖' },
+        { name: 'TensorFlow', level: 84, icon: '📘' },
+        { name: 'Scikit-learn', level: 85, icon: '📊' },
+        { name: 'NLP', level: 84, icon: '🗣️' },
+        { name: 'LLMs', level: 85, icon: '📝' }
       ]
     }
   ];
 
   return (
-  <section className="py-20 px-6" id="skills">
+    <section className="py-20 px-6" id="tech-stack">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -116,18 +116,17 @@ export function TechStack() {
                     </motion.div>
                     
                     <div className="flex-1">
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="text-white font-medium">{skill.name}</span>
+                      <div className="flex justify-between mb-1">
+                        <span className="text-gray-300 font-medium">{skill.name}</span>
                         <span className="text-purple-400 text-sm">{skill.level}%</span>
                       </div>
-                      
-                      <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div className="w-full bg-gray-800 rounded-full h-2">
                         <motion.div
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: categoryIndex * 0.1 + index * 0.1 + 0.5 }}
+                          transition={{ duration: 1, delay: categoryIndex * 0.1 + index * 0.1 }}
                           viewport={{ once: true }}
-                          className="bg-gradient-to-r from-purple-400 to-pink-400 h-2 rounded-full"
+                          className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full"
                         />
                       </div>
                     </div>

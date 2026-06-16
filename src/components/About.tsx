@@ -1,5 +1,4 @@
-﻿import image_c47cc8122e433f909085ba8a960e3b0b0cd876d9 from 'figma:asset/c47cc8122e433f909085ba8a960e3b0b0cd876d9.png';
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Activity, Code2, Database, GraduationCap, Layers3, ShieldCheck } from 'lucide-react';
 
@@ -61,11 +60,12 @@ export function About() {
           >
             <div className="relative">
               <div className="rounded-2xl border-2 border-cyan-400/30 overflow-hidden bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-1">
-                <img
-                  src={image_c47cc8122e433f909085ba8a960e3b0b0cd876d9}
-                  alt="Profile"
-                  className="w-full rounded-xl aspect-square object-cover"
-                />
+                <div className="w-full rounded-xl aspect-square flex items-center justify-center bg-gradient-to-br from-cyan-500/20 to-blue-600/20">
+                  <svg viewBox="0 0 200 200" className="w-2/3 h-2/3 text-cyan-400/60" fill="currentColor" aria-label="Profile">
+                    <circle cx="100" cy="75" r="40" />
+                    <ellipse cx="100" cy="175" rx="65" ry="50" />
+                  </svg>
+                </div>
               </div>
             </div>
           </motion.div>

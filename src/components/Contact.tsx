@@ -105,7 +105,7 @@ export function Contact() {
 
             <div className="mt-4 grid sm:grid-cols-3 gap-3">
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/18XQB9Eai8EmnM3e_R9_o3egznDXBzhfk/view?usp=sharing"
                 download
                 className="p-3 text-center bg-cyan-500/10 border border-cyan-400/30 text-cyan-200 rounded-lg hover:bg-cyan-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
               >

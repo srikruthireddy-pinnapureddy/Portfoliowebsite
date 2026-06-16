@@ -134,7 +134,7 @@ export function Hero() {
           className="flex flex-col md:flex-row justify-center gap-4"
         >
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/18XQB9Eai8EmnM3e_R9_o3egznDXBzhfk/view?usp=sharing"
             download
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-cyan-400/70 px-6 py-3 text-cyan-200 transition-all duration-300 hover:bg-cyan-500/10"
           >

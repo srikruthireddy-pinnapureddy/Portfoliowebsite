@@ -77,6 +77,7 @@ export function Projects() {
       technologiesUsed: ['Chart.js', 'Scikit-learn', 'Export/Import', 'REST APIs', 'Feature-rich UI'],
       keyFeatures: ['Automated Categorization', 'Forecasting', 'Interactive Charts', 'Recurring Expense Detection', 'Export/Import'],
       githubLink: 'https://github.com/srikruthireddy-pinnapureddy/money-notes-app-1bd93cf2',
+      demoLink: 'https://expenx-money-notes.lovable.app',
       period: '2024',
       icon: LayoutGrid,
       gradient: 'from-green-400 to-emerald-500'
@@ -218,7 +219,7 @@ export function Projects() {
                   <Sparkles size={14} />
                   Featured Software Engineering Projects
                 </div>
-                <h3 className="mt-3 text-2xl font-bold text-white">Most relevant projects for Honeywell Software Engineer I roles</h3>
+                <h3 className="mt-3 text-2xl font-bold text-white">Most relevant projects that match your interests.</h3>
               </div>
             </div>
 

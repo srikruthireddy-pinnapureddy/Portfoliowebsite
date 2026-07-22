@@ -8,9 +8,13 @@ export function Experience() {
       title: "AI Engineer Intern",
       company: "MGCV Tech Pvt Ltd",
       location: "Hyderabad, India",
-      period: "Nov 2025 - Present",
+      period: "Nov 2025 - June 2026",
       description:
-        "Developed AI-powered voice interviewing solutions using Python, FastAPI, and conversational AI technologies. Contributed to backend services, API integration, interview workflow management, and application reliability improvements within a startup environment.",
+`• Developed and deployed production-ready AI voice agents using Python and FastAPI, optimizing for real-time streaming and low-latency performance.
+• Contributed to core backend architecture and API integrations within a startup environment, improving system reliability and workflow orchestration.
+• Explored, benchmarked, and implemented deep learning models to power a high-throughput AI interview platform and a specialized AI healthcare voice assistant.
+• Maintained robust data pipelines to ensure seamless, scalable communication between deep learning models and client-facing interfaces.
+• Collaborated with cross-functional teams to transition experimental AI research into functional, enterprise-grade backend microservices.`,
       icon: Briefcase,
       skills: [
         'Python',
@@ -30,7 +34,7 @@ export function Experience() {
       location: "Hyderabad, India",
       period: "May 2025 - July 2025",
       description:
-        "Developed a Flask-based spam detection application using Python and NLP techniques. Worked on email content processing, classification workflows, debugging, testing, and backend application development.",
+`        "Developed a Flask-based spam detection application using Python and NLP techniques. Worked on email content processing, classification workflows, debugging, testing, and backend application development.",
       icon: Briefcase,
       skills: [
         'Python',
@@ -59,9 +63,6 @@ export function Experience() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
             Professional Experience
           </h2>
-          <p className="text-gray-400 text-lg">
-            Professional experience building backend systems, AI-powered applications, REST APIs, and software solutions.
-          </p>
         </motion.div>
 
         <div className="relative">

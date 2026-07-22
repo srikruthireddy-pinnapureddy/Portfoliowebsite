@@ -62,10 +62,8 @@ export function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
         >
-          B.Tech graduate specializing in Artificial Intelligence and Machine Learning with experience in backend development,
-          scalable software systems, REST APIs, cloud deployment, workflow automation, machine learning applications, and distributed systems.
+          B.Tech graduate specializing in Artificial Intelligence and Machine Learning with a strong foundation in AI, backend development, scalable software systems, REST APIs, cloud technologies, workflow automation, and machine learning. Passionate about building intelligent, reliable, and impactful solutions that solve real-world problems through technology.
         </motion.p>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

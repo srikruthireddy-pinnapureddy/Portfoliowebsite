@@ -208,7 +208,7 @@ export function Contact() {
           className="text-center mt-16 pt-8 border-t border-gray-700/50"
         >
           <p className="text-gray-500">
-            © 2026 Srikruthi Reddy Pinnapureddy. AI Engineering and machine learning portfolio.
+            © 2026 Srikruthi Reddy Pinnapureddy. 
           </p>
         </motion.div>
       </div>

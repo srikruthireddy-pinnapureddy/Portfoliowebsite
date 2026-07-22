@@ -20,7 +20,6 @@ type Project = {
   keyFeatures: string[];
   demoLink?: string;
   githubLink?: string;
-  period: string;
   icon: React.ComponentType<{ className?: string }>;
   gradient: string;
   featured?: boolean;
@@ -49,9 +48,20 @@ export function Projects() {
       keyFeatures: ['Real-time Synchronization', 'Expense Splitting', 'OCR Receipt Capture', 'Razorpay Integration', 'Cloud-ready Deployment'],
       demoLink: 'https://expenx-splitting-app.vercel.app/',
       githubLink: 'https://github.com/srikruthireddy-pinnapureddy/ExpenX',
-      period: '2025',
       icon: ServerCog,
       gradient: 'from-cyan-400 to-blue-500',
+      featured: true
+    },
+    {
+      title: 'AI Interviewer Platform',
+      description:
+        'An AI-powered interview platform that conducts real-time voice-based mock interviews with adaptive questioning, speech AI, secure session tracking, and detailed feedback generation.',
+      category: 'Featured Software Engineering Projects',
+      techStack: ['React.js', 'TypeScript', 'Python', 'FastAPI', 'PostgreSQL'],
+      technologiesUsed: ['Google Gemini API', 'Faster-Whisper', 'XTTS-v2', 'LangChain', 'Docker'],
+      keyFeatures: ['Voice-based Mock Interviews', 'Adaptive Question Generation', 'Speech-to-Text and Text-to-Speech', 'Interview History Management', 'AI-driven Feedback Summaries'],
+      icon: Sparkles,
+      gradient: 'from-emerald-400 to-cyan-500',
       featured: true
     },
     {
@@ -63,24 +73,9 @@ export function Projects() {
       technologiesUsed: ['Testing', 'Debugging', 'Database Design', 'JWT Auth', 'Postman'],
       keyFeatures: ['User Management', 'Task Lifecycle Management', 'Role-based Access', 'Service-layer Testing', 'Schema Design'],
       githubLink: 'https://github.com/srikruthireddy-pinnapureddy/team_task_manager_backend',
-      period: '2025',
       icon: Workflow,
       gradient: 'from-blue-400 to-indigo-500',
       featured: true
-    },
-    {
-      title: 'Money Notes App',
-      description:
-        'Full-stack expense tracking application with analytics, recurring expense detection, and forecasting support. Designed to help users understand and optimize spending behavior.',
-      category: 'Backend & Cloud Projects',
-      techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL'],
-      technologiesUsed: ['Chart.js', 'Scikit-learn', 'Export/Import', 'REST APIs', 'Feature-rich UI'],
-      keyFeatures: ['Automated Categorization', 'Forecasting', 'Interactive Charts', 'Recurring Expense Detection', 'Export/Import'],
-      githubLink: 'https://github.com/srikruthireddy-pinnapureddy/money-notes-app-1bd93cf2',
-      demoLink: 'https://expenx-money-notes.lovable.app',
-      period: '2024',
-      icon: LayoutGrid,
-      gradient: 'from-green-400 to-emerald-500'
     },
     {
       title: 'Fire & Smoke Detection using YOLOv9',
@@ -91,7 +86,6 @@ export function Projects() {
       technologiesUsed: ['GCN', 'MobileNet', 'Flask', 'Docker', 'Explainability'],
       keyFeatures: ['Transfer Learning', 'Model Explainability', 'Web UI', 'Dockerized Workflow', 'Clinical-style Review'],
       githubLink: 'https://github.com/srikruthireddy-pinnapureddy/Skin-Cancer-Detection-using-GCN-CNN-Hybrid-Models',
-      period: '2022',
       icon: Code2,
       gradient: 'from-pink-400 to-purple-500'
     },
@@ -104,7 +98,6 @@ export function Projects() {
       technologiesUsed: ['Voice UI', 'API Integration', 'Automation', 'Conversation Design', 'Application Layer'],
       keyFeatures: ['Voice-driven Workflow', 'Healthcare Context', 'Conversational Responses', 'API Integration', 'User Guidance'],
       githubLink: 'https://github.com/srikruthireddy-pinnapureddy',
-      period: '2025',
       icon: Sparkles,
       gradient: 'from-violet-400 to-fuchsia-500'
     },
@@ -117,7 +110,6 @@ export function Projects() {
       technologiesUsed: ['Automation', 'Planning', 'Coordination', 'Prompting', 'Experimental AI'],
       keyFeatures: ['Task Decomposition', 'Agent Coordination', 'Workflow Automation', 'Reasoning Chains', 'Modular Design'],
       githubLink: 'https://github.com/srikruthireddy-pinnapureddy',
-      period: '2025',
       icon: Workflow,
       gradient: 'from-fuchsia-400 to-rose-500'
     },
@@ -130,7 +122,6 @@ export function Projects() {
       technologiesUsed: ['Framer Motion', 'Tailwind CSS', 'Responsive UI', 'SEO', 'Dark Mode'],
       keyFeatures: ['Project Showcase', 'Resume Access', 'Responsive Layout', 'Enterprise-style Presentation', 'SEO Optimization'],
       githubLink: 'https://github.com/srikruthireddy-pinnapureddy/Portfoliowebsite',
-      period: '2026',
       icon: Workflow,
       gradient: 'from-slate-400 to-cyan-500'
     }
@@ -262,9 +253,6 @@ function ProjectCard({ project }: { project: Project }) {
             >
               <project.icon className="text-white w-6 h-6" />
             </motion.div>
-            <span className={`rounded-full border border-cyan-400/20 bg-cyan-500/10 px-2 py-1 text-xs text-cyan-100 whitespace-nowrap`}>
-              {project.period}
-            </span>
           </div>
           <CardTitle className="text-white">{project.title}</CardTitle>
           <CardDescription className="mt-2 text-gray-400">{project.description}</CardDescription>

@@ -21,14 +21,6 @@ export function About() {
     'Problem Solving'
   ];
 
-  const roles = [
-    'Software Engineer',
-    'Backend Engineer',
-    'Full Stack Developer',
-    'Application Developer',
-    'AI-Powered Systems Developer'
-  ];
-
   return (
     <section className="py-20 px-6" id="about">
       <div className="max-w-6xl mx-auto">

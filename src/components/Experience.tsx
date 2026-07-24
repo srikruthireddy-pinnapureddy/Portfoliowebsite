@@ -34,7 +34,7 @@ export function Experience() {
       location: "Hyderabad, India",
       period: "May 2025 - July 2025",
       description:
-`        "Developed a Flask-based spam detection application using Python and NLP techniques. Worked on email content processing, classification workflows, debugging, testing, and backend application development.",
+`Developed a Flask-based spam detection application using Python and NLP techniques. Worked on email content processing, classification workflows, debugging, testing, and backend application development.`,
       icon: Briefcase,
       skills: [
         'Python',
@@ -76,9 +76,7 @@ export function Experience() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: index * 0.3 }}
               viewport={{ once: true }}
-              className={`relative flex items-center mb-16 ${
-                index % 2 === 0 ? 'justify-start' : 'justify-end'
-              }`}
+              className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
             >
               {/* Timeline node */}
               <motion.div

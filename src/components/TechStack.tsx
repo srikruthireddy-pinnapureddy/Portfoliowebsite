@@ -49,8 +49,6 @@ export function TechStack() {
         { name: 'AWS', level: 82, icon: '☁️' },
         { name: 'Docker', level: 85, icon: '🐳' },
         { name: 'Git', level: 88, icon: '🔀' },
-        { name: 'Netlify', level: 86, icon: '🚀' },
-        { name: 'Vercel', level: 84, icon: '▲' }
       ]
     },
     {

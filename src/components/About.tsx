@@ -1,9 +1,15 @@
-﻿import image_c47cc8122e433f909085ba8a960e3b0b0cd876d9 from 'figma:asset/c47cc8122e433f909085ba8a960e3b0b0cd876d9.png';
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { Activity, Code2, Database, GraduationCap, Layers3, ShieldCheck } from 'lucide-react';
 
 export function About() {
+  const roles = [
+    'AI Engineer',
+    'Backend Developer',
+    'Full Stack Developer',
+    'Software Engineer'
+  ];
+
   const focusAreas = [
     'Data Structures & Algorithms',
     'Object-Oriented Programming',
@@ -53,11 +59,12 @@ export function About() {
           >
             <div className="relative">
               <div className="rounded-2xl border-2 border-cyan-400/30 overflow-hidden bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-1">
-                <img
-                  src={image_c47cc8122e433f909085ba8a960e3b0b0cd876d9}
-                  alt="Profile"
-                  className="w-full rounded-xl aspect-square object-cover"
-                />
+                <div className="w-full rounded-xl aspect-square bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 border border-cyan-400/20 flex items-center justify-center p-6 text-center">
+                  <div>
+                    <p className="text-cyan-100 text-2xl md:text-3xl font-bold tracking-wide">Srikruthi Reddy</p>
+                    <p className="text-blue-200 text-sm md:text-base mt-2">AI and Full Stack Engineer</p>
+                  </div>
+                </div>
               </div>
             </div>
           </motion.div>

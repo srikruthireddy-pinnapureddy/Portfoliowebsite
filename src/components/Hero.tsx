@@ -1,20 +1,14 @@
 ﻿import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Github, Linkedin, ServerCog, TerminalSquare, Workflow } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, FlaskConical, Network, ScanSearch } from 'lucide-react';
 
 export function Hero() {
   const fullName = 'SRIKRUTHI REDDY PINNAPUREDDY';
   const [displayedName, setDisplayedName] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const highlights = [
-    'Data Structures & Algorithms',
-    'Backend Engineering',
-    'REST API Development',
-    'Database Management',
-    'System Design',
-    'Full Stack Development',
-    'Cloud Computing',
-    'Software Engineering'
+    'Python', 'PyTorch', 'TensorFlow', 'LLMs', 'RAG', 'LangChain', 'LangGraph',
+    'FastAPI', 'Computer Vision', 'Scientific AI'
   ];
 
   useEffect(() => {
@@ -28,7 +22,7 @@ export function Hero() {
   }, [currentIndex, fullName]);
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 relative">
+    <section className="hero-section min-h-screen flex items-start justify-center px-6 pb-12 relative md:items-center">
       <div className="text-center max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -37,8 +31,8 @@ export function Hero() {
           className="mb-8"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-200 mb-6">
-            <ServerCog size={16} />
-            Software Engineer Candidate
+            <Network size={16} />
+            AI/ML Engineer
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold mb-5 leading-tight text-white">
@@ -52,7 +46,7 @@ export function Hero() {
             </motion.span>
           </h1>
           <div className="text-xl md:text-3xl font-semibold text-cyan-100 mb-6">
-            Software Engineer | Backend Developer | AI & Systems Developer
+            AI/ML Engineer | Generative AI | Scientific AI
           </div>
         </motion.div>
 
@@ -62,8 +56,9 @@ export function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
         >
-          B.Tech graduate specializing in Artificial Intelligence and Machine Learning with a strong foundation in AI, backend development, scalable software systems, REST APIs, cloud technologies, workflow automation, and machine learning. Passionate about building intelligent, reliable, and impactful solutions that solve real-world problems through technology.
+          B.Tech Computer Science graduate specializing in Artificial Intelligence and Machine Learning, with hands-on experience building Generative AI applications, AI agents, computer vision systems, scientific AI workflows, and production-ready backend APIs.
         </motion.p>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,7 +81,7 @@ export function Hero() {
           transition={{ delay: 1.2, duration: 0.8 }}
           className="flex justify-center gap-6 mb-12"
         >
-          {[Workflow, TerminalSquare, ServerCog].map((Icon, index) => (
+          {[Network, FlaskConical, ScanSearch].map((Icon, index) => (
             <motion.div
               key={index}
               animate={{
@@ -118,10 +113,10 @@ export function Hero() {
             <ArrowRight size={18} />
           </a>
           <a
-            href="#contact"
+            href="#research"
             className="rounded-lg border border-blue-400/60 px-8 py-3 text-blue-200 transition-all duration-300 hover:bg-blue-500/10"
           >
-            Contact Me
+            Research
           </a>
         </motion.div>
 
@@ -132,7 +127,7 @@ export function Hero() {
           className="flex flex-col md:flex-row justify-center gap-4"
         >
           <a
-            href="https://drive.google.com/file/d/18XQB9Eai8EmnM3e_R9_o3egznDXBzhfk/view?usp=sharing"
+            href="https://drive.google.com/file/d/14gTeOMJIH_NOz9aM_xTHuX4PI9KHLaed/view?usp=sharing"
             download
             className="inline-flex items-center justify-center gap-2 rounded-lg border border-cyan-400/70 px-6 py-3 text-cyan-200 transition-all duration-300 hover:bg-cyan-500/10"
           >

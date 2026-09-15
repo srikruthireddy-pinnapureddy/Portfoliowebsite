@@ -5,6 +5,15 @@ import { Briefcase, FileText } from 'lucide-react';
 export function Experience() {
   const experiences = [
     {
+      title: "AI/ML Intern – Scientific AI",
+      company: "Pozescaf Discovery Solutions",
+      location: "Hyderabad, India",
+      period: "",
+      description: "Contributing to AI/ML workflows for scientific computing, molecular modeling, and drug-discovery-oriented applications.",
+      icon: Briefcase,
+      skills: ['Python', 'Scientific AI', 'Molecular Modeling', 'Machine Learning']
+    },
+    {
       title: "AI Engineer Intern",
       company: "MGCV Tech Pvt Ltd",
       location: "Hyderabad, India",
@@ -90,7 +99,7 @@ export function Experience() {
               {/* Content card */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className={`w-5/12 ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'}`}
+                className={`w-5/12 max-md:w-full ${index % 2 === 0 ? 'mr-auto' : 'ml-auto'}`}
               >
                 <div className="bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:border-blue-400/50 transition-all duration-300">
                   <div className="flex items-center mb-4">

@@ -1,31 +1,9 @@
 ﻿import React from 'react';
 import { motion } from 'framer-motion';
-import { Activity, Code2, Database, GraduationCap, Layers3, ShieldCheck } from 'lucide-react';
+import { Activity, BrainCircuit, Database, FlaskConical, GraduationCap, Network } from 'lucide-react';
 
 export function About() {
-  const roles = [
-    'AI Engineer',
-    'Backend Developer',
-    'Full Stack Developer',
-    'Software Engineer'
-  ];
-
-  const focusAreas = [
-    'Data Structures & Algorithms',
-    'Object-Oriented Programming',
-    'Database Management Systems',
-    'Operating Systems',
-    'Computer Networks',
-    'Backend Development',
-    'REST API Development',
-    'System Design Fundamentals',
-    'Software Engineering',
-    'Database Design',
-    'Debugging & Testing',
-    'Full Stack Development',
-    'Cloud Computing',
-    'Problem Solving'
-  ];
+  const focusAreas = ['AI/ML Engineering', 'Generative AI', 'Scientific AI', 'AI Backend Systems'];
 
   return (
     <section className="py-20 px-6" id="about">
@@ -41,12 +19,10 @@ export function About() {
             About Me
           </h2>
           <p className="mx-auto max-w-3xl text-lg text-gray-400">
-            Software Engineer with experience building full-stack applications,
-            backend services, REST APIs, and AI-powered systems. Passionate about
-            solving complex problems through scalable software design, efficient
-            algorithms, and clean engineering practices. Experienced in developing
-            production-oriented applications using Python, FastAPI, React,
-            TypeScript, SQL, and modern development tools.
+            I build production-oriented AI systems across Generative AI, scientific AI,
+            computer vision, and backend engineering. My work combines model integration,
+            agentic workflows, and reliable APIs to turn research and product ideas into
+            useful applications.
           </p>
         </motion.div>
 
@@ -59,11 +35,10 @@ export function About() {
           >
             <div className="relative">
               <div className="rounded-2xl border-2 border-cyan-400/30 overflow-hidden bg-gradient-to-br from-cyan-500/10 to-blue-500/10 p-1">
-                <div className="w-full rounded-xl aspect-square bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 border border-cyan-400/20 flex items-center justify-center p-6 text-center">
-                  <div>
-                    <p className="text-cyan-100 text-2xl md:text-3xl font-bold tracking-wide">Srikruthi Reddy</p>
-                    <p className="text-blue-200 text-sm md:text-base mt-2">AI and Full Stack Engineer</p>
-                  </div>
+                <div className="aspect-square rounded-xl bg-[#071525] p-8 flex flex-col justify-between" aria-label="AI and scientific computing profile panel">
+                  <div className="flex items-center justify-between text-cyan-300"><BrainCircuit size={34} /><span className="font-mono text-xs">AI_SYSTEMS</span></div>
+                  <div><p className="font-mono text-sm text-cyan-300">/ about.srikruthi</p><p className="mt-3 text-3xl font-bold text-white">Models to<br />meaningful systems.</p></div>
+                  <div className="grid grid-cols-3 gap-2 text-center text-xs text-gray-400"><span className="border border-cyan-400/20 p-2">GENAI</span><span className="border border-cyan-400/20 p-2">SCI-AI</span><span className="border border-cyan-400/20 p-2">VISION</span></div>
                 </div>
               </div>
             </div>
@@ -81,25 +56,14 @@ export function About() {
             </h3>
             
             <p className="text-gray-300 text-lg leading-relaxed">
-               I enjoy designing and building software systems that are reliable, scalable, and easy to maintain. My experience spans backend development, API design, full-stack web applications, database management, and AI-powered solutions. Through internships and projects, I have worked on conversational AI systems, computer vision applications, and web platforms while strengthening my foundations in data structures, algorithms, object-oriented programming, databases, operating systems, and software engineering principles.
+              I am interested in the engineering boundary between models and dependable products: retrieval and agent workflows, computer vision systems, molecular modeling, and Python services that make AI usable in production.
             </p>
-
-            <div className="grid sm:grid-cols-2 gap-3 mt-6">
-              {roles.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-lg border border-cyan-400/20 bg-cyan-500/10 px-3 py-2 text-sm text-cyan-100"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
 
             <div className="grid sm:grid-cols-2 gap-3 mt-6">
               {focusAreas.map((item) => (
                 <div
                   key={item}
-                  className="rounded-lg border border-blue-400/20 bg-blue-500/10 px-3 py-2 text-sm text-blue-100"
+                  className="rounded-lg border border-cyan-400/20 bg-cyan-500/10 px-3 py-2 text-sm text-cyan-100"
                 >
                   {item}
                 </div>
@@ -122,32 +86,11 @@ export function About() {
 
               <div className="grid sm:grid-cols-3 gap-3">
                 <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
-                  <Code2 className="mx-auto text-cyan-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Data Structures & Algorithms</p>
-                </div>
-                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
-                  <Database className="mx-auto text-blue-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Backend Engineering</p>
-                </div>
-                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
-                  <ShieldCheck className="mx-auto text-purple-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Problem Solving</p>
-                </div>
-              </div>
-
-              <div className="grid sm:grid-cols-3 gap-3">
-                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
-                  <Layers3 className="mx-auto text-cyan-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">System Design</p>
-                </div>
-                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
                   <Activity className="mx-auto text-blue-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">API Development</p>
+                  <p className="text-sm text-gray-300">Production APIs</p>
                 </div>
-                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center">
-                  <ShieldCheck className="mx-auto text-purple-400 mb-2" size={20} />
-                  <p className="text-sm text-gray-300">Software Engineering</p>
-                </div>
+                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center"><FlaskConical className="mx-auto text-cyan-400 mb-2" size={20} /><p className="text-sm text-gray-300">Scientific Workflows</p></div>
+                <div className="bg-gray-900/40 border border-gray-700/50 rounded-lg p-3 text-center"><Network className="mx-auto text-blue-400 mb-2" size={20} /><p className="text-sm text-gray-300">Model Integration</p></div>
               </div>
             </div>
           </motion.div>

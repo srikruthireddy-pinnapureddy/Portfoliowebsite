@@ -10,16 +10,21 @@ export function NeuralBackground() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+      canvas.width = window.innerWidth * ratio;
+      canvas.height = window.innerHeight * ratio;
+      canvas.style.width = `${window.innerWidth}px`;
+      canvas.style.height = `${window.innerHeight}px`;
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     };
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
     const nodes: Array<{ x: number; y: number; vx: number; vy: number }> = [];
-    const nodeCount = 50;
+    const nodeCount = window.innerWidth < 640 ? 22 : 38;
 
     // Initialize nodes
     for (let i = 0; i < nodeCount; i++) {
@@ -31,6 +36,7 @@ export function NeuralBackground() {
       });
     }
 
+    let animationFrame = 0;
     function animate() {
       ctx.fillStyle = 'rgba(2, 8, 23, 0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -69,13 +75,14 @@ export function NeuralBackground() {
         });
       });
 
-      requestAnimationFrame(animate);
+      if (!reducedMotion) animationFrame = requestAnimationFrame(animate);
     }
 
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
+      cancelAnimationFrame(animationFrame);
     };
   }, []);
 

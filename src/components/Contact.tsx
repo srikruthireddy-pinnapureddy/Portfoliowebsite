@@ -12,10 +12,19 @@ export function Contact() {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    setStatus('submitting');
+    try {
+      const response = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ 'form-name': 'contact', ...formData }).toString() });
+      if (!response.ok) throw new Error('Form submission failed');
+      setStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch {
+      setStatus('error');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -58,7 +67,9 @@ export function Contact() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <input type="hidden" name="bot-field" />
                   <div>
                     <Input
                       type="text"
@@ -97,15 +108,17 @@ export function Contact() {
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white"
                   >
                     <Send className="mr-2" size={16} />
-                    Send Message
+                    {status === 'submitting' ? 'Sending...' : 'Send Message'}
                   </Button>
+                  {status === 'success' && <p role="status" className="text-sm text-emerald-300">Thanks, your message was sent successfully.</p>}
+                  {status === 'error' && <p role="alert" className="text-sm text-red-300">Something went wrong while sending. Please email me directly.</p>}
                 </form>
               </CardContent>
             </Card>
 
             <div className="mt-4 grid sm:grid-cols-3 gap-3">
               <a
-                href="https://drive.google.com/file/d/18XQB9Eai8EmnM3e_R9_o3egznDXBzhfk/view?usp=sharing"
+                href="https://drive.google.com/file/d/14gTeOMJIH_NOz9aM_xTHuX4PI9KHLaed/view?usp=sharing"
                 download
                 className="p-3 text-center bg-cyan-500/10 border border-cyan-400/30 text-cyan-200 rounded-lg hover:bg-cyan-500/20 transition-all duration-300 inline-flex items-center justify-center gap-2"
               >

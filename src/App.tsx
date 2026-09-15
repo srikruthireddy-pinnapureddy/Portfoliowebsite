@@ -8,15 +8,17 @@ import { Certifications } from './components/Certifications';
 import { Volunteer } from './components/Volunteer';
 import { Contact } from './components/Contact';
 import { NeuralBackground } from './components/NeuralBackground';
+import { Research } from './components/Research';
 
 export default function App() {
   return (
     <div className="dark min-h-screen bg-background text-foreground relative overflow-x-hidden">
       <NeuralBackground />
-      <div className="relative z-10">
+      <div className="relative z-10" id="top">
         <Hero />
         <About />
         <Projects />
+        <Research />
         <Experience />
         <TechStack />
         <Certifications />

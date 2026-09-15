@@ -2352,3 +2352,14 @@ html {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+
+.hero-section {
+  padding-top: 5rem;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    align-items: flex-start;
+    padding-top: 7rem;
+  }
+}

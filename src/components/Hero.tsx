@@ -30,7 +30,7 @@ export function Hero() {
           transition={{ duration: 0.8 }}
           className="mb-8"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-200 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-blue-500/20 text-blue-400 rounded-full text-sm border border-blue-400/50">
             <Network size={16} />
             AI/ML Engineer
           </div>
@@ -40,12 +40,12 @@ export function Hero() {
             <motion.span
               animate={{ opacity: [1, 0, 1] }}
               transition={{ duration: 0.9, repeat: Infinity }}
-              className="inline-block ml-1 text-cyan-300"
+              className="inline-block ml-1 text-blue-400"
             >
               |
             </motion.span>
           </h1>
-          <div className="text-xl md:text-3xl font-semibold text-cyan-100 mb-6">
+          <div className="text-xl md:text-3xl font-semibold text-blue-400 mb-6">
             AI/ML Engineer | Generative AI | Scientific AI
           </div>
         </motion.div>
@@ -56,19 +56,19 @@ export function Hero() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="text-lg md:text-xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
         >
-          B.Tech Computer Science graduate specializing in Artificial Intelligence and Machine Learning, with hands-on experience building Generative AI applications, AI agents, computer vision systems, scientific AI workflows, and production-ready backend APIs.
+          B.Tech Computer Science graduate specializing in Artificial Intelligence and Machine Learning, with hands on experience building Generative AI applications, AI agents, computer vision systems, scientific AI workflows, and production-ready backend APIs.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="flex flex-wrap justify-center gap-2 mb-12"
         >
           {highlights.map((highlight) => (
             <span
               key={highlight}
-              className="rounded-full border border-blue-400/25 bg-blue-500/10 px-4 py-2 text-sm text-blue-100"
+              className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm border border-purple-400/30"
             >
               {highlight}
             </span>
@@ -92,9 +92,9 @@ export function Hero() {
                 rotate: { duration: 12, repeat: Infinity, ease: 'linear' },
                 scale: { duration: 2.4, repeat: Infinity, delay: index * 0.25 }
               }}
-              className="rounded-full border border-cyan-400/25 bg-gradient-to-br from-cyan-500/15 to-blue-500/15 p-4"
+              className="p-4 bg-blue-500/20 rounded-full border border-blue-400/50"
             >
-              <Icon size={36} className="text-cyan-300" />
+              <Icon size={36} className="text-blue-400" />
             </motion.div>
           ))}
         </motion.div>
@@ -114,7 +114,7 @@ export function Hero() {
           </a>
           <a
             href="#research"
-            className="rounded-lg border border-blue-400/60 px-8 py-3 text-blue-200 transition-all duration-300 hover:bg-blue-500/10"
+            className="rounded-lg bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 px-8 py-3 text-blue-400 transition-all duration-300 hover:border-blue-400/50 hover:text-blue-300"
           >
             Research
           </a>
@@ -127,9 +127,9 @@ export function Hero() {
           className="flex flex-col md:flex-row justify-center gap-4"
         >
           <a
-            href="https://drive.google.com/file/d/14gTeOMJIH_NOz9aM_xTHuX4PI9KHLaed/view?usp=sharing"
+            href="https://drive.google.com/file/d/1XvtG8Q-9_I0dvI7QzesvgtgoaxSQbl-A/view?usp=sharing"
             download
-            className="inline-flex items-center justify-center gap-2 rounded-lg border border-cyan-400/70 px-6 py-3 text-cyan-200 transition-all duration-300 hover:bg-cyan-500/10"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 px-6 py-3 text-blue-400 transition-all duration-300 hover:border-blue-400/50 hover:text-blue-300"
           >
             <Download size={18} />
             Resume Download
@@ -138,7 +138,7 @@ export function Hero() {
             href="https://github.com/srikruthireddy-pinnapureddy"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-400/60 px-6 py-3 text-gray-200 transition-all duration-300 hover:bg-gray-500/10"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 px-6 py-3 text-blue-400 transition-all duration-300 hover:border-blue-400/50 hover:text-blue-300"
           >
             <Github size={18} />
             GitHub Profile
@@ -147,7 +147,7 @@ export function Hero() {
             href="https://linkedin.com/in/srikruthi-reddy-pinnapureddy"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-lg border border-blue-400/60 px-6 py-3 text-blue-200 transition-all duration-300 hover:bg-blue-500/10"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 px-6 py-3 text-blue-400 transition-all duration-300 hover:border-blue-400/50 hover:text-blue-300"
           >
             <Linkedin size={18} />
             LinkedIn

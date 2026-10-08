@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, BookOpen, Calendar } from 'lucide-react';
+import { BookOpen, Calendar } from 'lucide-react';
 
 export function Volunteer() {
   const experiences = [
@@ -14,8 +14,7 @@ export function Volunteer() {
         "Design and manage visual documentation materials, ensuring accurate and engaging event records.",
         "Collaborate with club leadership to maintain organized documentation systems."
       ],
-      icon: BookOpen,
-      gradient: "from-indigo-400 to-purple-500"
+      icon: BookOpen
     },
     {
       title: "Event Head – Swami Vivekananda Birthday Celebrations",
@@ -25,8 +24,7 @@ export function Volunteer() {
         "Organized and coordinated the celebration event, managing scheduling, logistics, and communication with faculty.",
         "Supervised a team of volunteers to ensure smooth execution of cultural and educational activities."
       ],
-      icon: Calendar,
-      gradient: "from-green-400 to-emerald-500"
+      icon: Calendar
     },
     {
       title: "Kuchipudi Dancer",
@@ -48,7 +46,16 @@ export function Volunteer() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-6"
+            style={{
+              backgroundImage: 'linear-gradient(to right, #6ee7b7, #22d3ee)',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              color: 'transparent',
+            }}
+          >
             Leadership & Achievements
           </h2>
           <p className="text-gray-400 text-lg">
@@ -56,52 +63,54 @@ export function Volunteer() {
           </p>
         </motion.div>
 
-        {/* Volunteer Experience */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">Volunteer & Leadership Experience</h3>
-          <div className="space-y-8">
+          <h3 className="text-2xl font-bold text-white mb-8 text-center">
+            Volunteer & Leadership Experience
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {experiences.map((exp, index) => (
               <motion.div
                 key={exp.title}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.02 }}
-                className="bg-gray-900 border border-purple-500/30 rounded-xl p-6 shadow-lg shadow-purple-500/10"
+                whileHover={{ scale: 1.03 }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-0 hover:opacity-5 transition-opacity duration-300 rounded-lg`} />
-                
-                <div className="flex items-start space-x-4">
-                  <motion.div
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.5 }}
-                    className={`p-3 rounded-full bg-gradient-to-r ${exp.gradient} bg-opacity-20 flex-shrink-0`}
-                  >
-                    {typeof exp.icon === 'string' ? (
-                      <span className="text-2xl">{exp.icon}</span>
-                    ) : (
-                      <exp.icon className="w-6 h-6 text-white" />
-                    )}
-                  </motion.div>
-                  
-                  <div className="flex-grow">
-                    <h4 className="text-xl font-bold text-white mb-1">{exp.title}</h4>
-                    <p className="text-purple-400 mb-1">{exp.organization}</p>
-                    {exp.institution && (
-                      <p className="text-gray-400 text-sm mb-2">{exp.institution}</p>
-                    )}
-                    <p className="text-purple-300 text-sm mb-4">{exp.period}</p>
-                    
-                    <ul className="space-y-2">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="text-gray-300 text-sm flex items-start">
-                          <span className="text-purple-400 mr-3">•</span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                <div className="h-full bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-lg p-6 hover:border-blue-400/50 transition-all duration-300">
+                  {/* Header: circled icon + title + blue organization */}
+                  <div className="flex items-center mb-4">
+                    <div className="p-2 bg-blue-500/20 rounded-full mr-4 border border-blue-400/50 flex-shrink-0">
+                      {typeof exp.icon === 'string' ? (
+                        <span className="w-6 h-6 flex items-center justify-center text-xl leading-none">
+                          {exp.icon}
+                        </span>
+                      ) : (
+                        <exp.icon className="w-6 h-6 text-blue-400" />
+                      )}
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white">{exp.title}</h4>
+                      <p className="text-blue-400">{exp.organization}</p>
+                    </div>
                   </div>
+
+                  {exp.period && (
+                    <p className="text-purple-300 text-sm mb-1">{exp.period}</p>
+                  )}
+                  {exp.institution && (
+                    <p className="text-gray-400 text-sm mb-3">{exp.institution}</p>
+                  )}
+
+                  <ul className="space-y-2 mt-3">
+                    {exp.description.map((item, i) => (
+                      <li key={i} className="text-gray-300 text-sm flex items-start">
+                        <span className="text-blue-400 mr-3">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}

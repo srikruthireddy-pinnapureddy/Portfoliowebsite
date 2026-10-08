@@ -10,75 +10,98 @@ export function NeuralBackground() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    let animationFrame = 0;
+
     const resizeCanvas = () => {
       const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
-      canvas.width = window.innerWidth * ratio;
-      canvas.height = window.innerHeight * ratio;
-      canvas.style.width = `${window.innerWidth}px`;
-      canvas.style.height = `${window.innerHeight}px`;
+
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      canvas.width = width * ratio;
+      canvas.height = height * ratio;
+
+      canvas.style.width = '100vw';
+      canvas.style.height = '100vh';
+
       ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     };
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
 
-    const nodes: Array<{ x: number; y: number; vx: number; vy: number }> = [];
+    const nodes: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+    }> = [];
+
     const nodeCount = window.innerWidth < 640 ? 22 : 38;
 
-    // Initialize nodes
     for (let i = 0; i < nodeCount; i++) {
       nodes.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
         vx: (Math.random() - 0.5) * 0.5,
         vy: (Math.random() - 0.5) * 0.5,
       });
     }
 
-    let animationFrame = 0;
-    function animate() {
-      ctx.fillStyle = 'rgba(2, 8, 23, 0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    const animate = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
 
-      // Update and draw nodes
+      ctx.fillStyle = 'rgba(2, 8, 23, 0.12)';
+      ctx.fillRect(0, 0, width, height);
+
       nodes.forEach((node, i) => {
         node.x += node.vx;
         node.y += node.vy;
 
-        // Wrap around edges
-        if (node.x < 0) node.x = canvas.width;
-        if (node.x > canvas.width) node.x = 0;
-        if (node.y < 0) node.y = canvas.height;
-        if (node.y > canvas.height) node.y = 0;
+        if (node.x < 0) node.x = width;
+        if (node.x > width) node.x = 0;
 
-        // Draw node
+        if (node.y < 0) node.y = height;
+        if (node.y > height) node.y = 0;
+
+        // Node
         ctx.beginPath();
         ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(59, 130, 246, 0.6)';
+        ctx.fillStyle = 'rgba(59, 130, 246, 0.65)';
         ctx.fill();
 
-        // Draw connections
-        nodes.slice(i + 1).forEach(otherNode => {
-          const distance = Math.sqrt(
-            Math.pow(node.x - otherNode.x, 2) + Math.pow(node.y - otherNode.y, 2)
-          );
+        // Connections
+        nodes.slice(i + 1).forEach((otherNode) => {
+          const dx = node.x - otherNode.x;
+          const dy = node.y - otherNode.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 150) {
             ctx.beginPath();
             ctx.moveTo(node.x, node.y);
             ctx.lineTo(otherNode.x, otherNode.y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${0.3 - distance / 500})`;
+
+            const opacity = Math.max(0, 0.3 - distance / 500);
+
+            ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
         });
       });
 
-      if (!reducedMotion) animationFrame = requestAnimationFrame(animate);
-    }
+      if (!reducedMotion) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
 
     animate();
+
+    window.addEventListener('resize', resizeCanvas);
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
@@ -89,8 +112,13 @@ export function NeuralBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none"
-      style={{ background: 'linear-gradient(135deg, #020817 0%, #0f172a 100%)' }}
+      className="fixed inset-0 pointer-events-none"
+      style={{
+        width: '100vw',
+        height: '100vh',
+        zIndex: 0,
+        background: '#020817',
+      }}
     />
   );
 }

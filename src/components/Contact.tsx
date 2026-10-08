@@ -186,7 +186,7 @@ export function Contact() {
                 {[
                   { icon: Github, label: 'GitHub Profile', href: 'https://github.com/srikruthireddy-pinnapureddy', color: 'from-gray-400 to-gray-600' },
                   { icon: Linkedin, label: 'LinkedIn Profile', href: 'https://linkedin.com/in/srikruthi-reddy-pinnapureddy', color: 'from-blue-400 to-blue-600' },
-                  { icon: Mail, label: 'srikruthi12032005@gmail.com', href: 'mailto:srikruthi12032005@gmail.com', color: 'from-red-400 to-pink-400' }
+                  { icon: Mail, label: 'srikruthi.ai@gmail.com', href: 'mailto:srikruthi.ai@gmail.com', color: 'from-red-400 to-pink-400' }
                 ].map((social, index) => (
                   <motion.a
                     key={social.label}

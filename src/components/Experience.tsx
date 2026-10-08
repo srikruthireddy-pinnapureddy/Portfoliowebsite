@@ -8,13 +8,13 @@ export function Experience() {
       title: "AI/ML Intern – Scientific AI",
       company: "Pozescaf Discovery Solutions",
       location: "Hyderabad, India",
-      period: "",
+      period: "July 2026 - Present",
       description: "Contributing to AI/ML workflows for scientific computing, molecular modeling, and drug-discovery-oriented applications.",
       icon: Briefcase,
       skills: ['Python', 'Scientific AI', 'Molecular Modeling', 'Machine Learning']
     },
     {
-      title: "AI Engineer Intern",
+      title: "AI Engineer ",
       company: "MGCV Tech Pvt Ltd",
       location: "Hyderabad, India",
       period: "Nov 2025 - June 2026",
@@ -69,7 +69,16 @@ export function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-6"
+            style={{
+              backgroundImage: 'linear-gradient(to right, #6ee7b7, #22d3ee)',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              color: 'transparent',
+            }}
+          >
             Professional Experience
           </h2>
         </motion.div>
